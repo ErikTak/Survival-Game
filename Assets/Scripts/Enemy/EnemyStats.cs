@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyStats : MonoBehaviour
 {
     public EnemyScriptableObject enemyData;
+    public HealthBar healthBar;
 
     // Current stats
     float currentMoveSpeed;
@@ -17,11 +18,13 @@ public class EnemyStats : MonoBehaviour
         currentMoveSpeed = enemyData.MoveSpeed;
         currentHealth = enemyData.MaxHealth;
         currentDamage = enemyData.Damage;
+        healthBar.SetMaxHealth(currentHealth);
     }
 
     public void TakeDamage(float dmg)
     {
         currentHealth -= dmg;
+        healthBar.SetHealth(currentHealth);
 
         if (currentHealth <= 0)
         {
@@ -32,5 +35,15 @@ public class EnemyStats : MonoBehaviour
     public void Kill()
     {
         Destroy(gameObject);
+    }
+
+    private void OnCollisionStay2D(Collision2D col)
+    {
+        // Refenrece the script from the collided collider and deal damage using TakeDamage()
+        if (col.gameObject.CompareTag("Player"))
+        {
+            PlayerStats player = col.gameObject.GetComponent<PlayerStats>();
+            player.TakeDamage(currentDamage); // Make sure to use currentDamage instead of weaponData.damage in case any damage multipliers in the future
+        }
     }
 }

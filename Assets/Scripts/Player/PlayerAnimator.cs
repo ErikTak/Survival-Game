@@ -7,7 +7,7 @@ public class PlayerAnimator : MonoBehaviour
     Animator am;
     PlayerMove pm;
     SpriteRenderer sr;
-
+    PlayerStats ps;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,7 @@ public class PlayerAnimator : MonoBehaviour
         am = GetComponent<Animator>();
         pm = GetComponent<PlayerMove>();
         sr = GetComponent<SpriteRenderer>();
+        ps = GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame

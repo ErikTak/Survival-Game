@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec84550b52984a0409d04baa2d0c2da5, type: 3}
+  m_Name: Test2WepCard
+  m_EditorClassIdentifier: 
+  name: TestCard1
+  description: TestCardDesc1
+  artwork: {fileID: -1113560413, guid: fa5ce32f67741024ba3b9f851a1c7749, type: 3}
+  damage: 0
+  speed: 0
+  cooldown: 0
+  pierce: 0

@@ -21,5 +21,14 @@ public class GarlicBehaviour : MeleeWeaponBehaviour
 
             markedEnemies.Add(col.gameObject); // Mark the enemy so they can't take damage from the garlic until the cooldown is done
         }
+        else if (col.CompareTag("Prop"))
+        {
+            if (col.gameObject.TryGetComponent(out BreakableProps breakable) && !markedEnemies.Contains(col.gameObject))
+            {
+                breakable.TakeDamage(currentDamage);
+
+                markedEnemies.Add(col.gameObject);
+            }
+        }
     }
 }
