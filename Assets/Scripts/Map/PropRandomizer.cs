@@ -6,6 +6,8 @@ public class PropRandomizer : MonoBehaviour
 {
     public List<GameObject> propSpawnPoints;
     public List<GameObject> propPrefabs;
+    public List<GameObject> foliageSpawnPoints;
+    public List<GameObject> foliagePrefabs;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,12 @@ public class PropRandomizer : MonoBehaviour
             int rand = Random.Range(0, propPrefabs.Count);
             GameObject prop = Instantiate(propPrefabs[rand], sp.transform.position, Quaternion.identity);
             prop.transform.parent = sp.transform;
+        }
+        foreach (GameObject fp in foliageSpawnPoints)
+        {
+            int rand = Random.Range(0, foliagePrefabs.Count);
+            GameObject prop = Instantiate(foliagePrefabs[rand], fp.transform.position, Quaternion.identity);
+            prop.transform.parent = fp.transform;
         }
     }
 }

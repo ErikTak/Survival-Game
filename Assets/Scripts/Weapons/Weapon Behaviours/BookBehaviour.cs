@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BookBehaviour : MeleeWeaponBehaviour
+public class BookBehaviour : ProjectileWeaponBehaviour
 {
-
-    protected override void Start()
+    
+    private void Update()
     {
-        base.Start();
+        // Rotate the book around the parent object
+        transform.RotateAround(transform.parent.position, Vector3.forward, weaponData.Speed * Time.deltaTime);
     }
-
 }
+

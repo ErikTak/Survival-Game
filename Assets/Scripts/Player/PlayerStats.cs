@@ -6,18 +6,33 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
     public CharacterScriptableObject characterData;
+    Animator am;
     public HealthBar healthBar;
     public ExperienceBar expBar;
     public PauseMenu pauseMenu;
 
-    public bool dieAnimation;
+    //delete this if not working
+    public WeaponManager wpmng;
+
+    public bool isDead = false;
+
+
+    [SerializeField] private ColoredFlash flashEffect;
+    [SerializeField] private Color flashColors;
 
     // Current stats
-    float currentHealth;
-    float currentRecovery;
-    float currentMoveSpeed;
-    float currentMight;
-    float currentProjectileSpeed;
+    [HideInInspector]
+    public float currentHealth;
+    [HideInInspector]
+    public float currentRecovery;
+    [HideInInspector]
+    public float currentMoveSpeed;
+    [HideInInspector]
+    public float currentMight;
+    [HideInInspector]
+    public float currentProjectileSpeed;
+    [HideInInspector]
+    public float currentMagnet;
 
     // Experience and level of the player
     [Header("Experience/Level")]
@@ -44,12 +59,14 @@ public class PlayerStats : MonoBehaviour
 
     void Awake()
     {
+        am = GetComponent<Animator>();
         // Assign the variables
         currentHealth = characterData.MaxHealth;
         currentRecovery = characterData.Recovery;
         currentMoveSpeed = characterData.MoveSpeed;
         currentMight = characterData.Might;
         currentProjectileSpeed = characterData.ProjectileSpeed;
+        currentMagnet = characterData.Magnet;
     }
 
     void Start()
@@ -59,7 +76,7 @@ public class PlayerStats : MonoBehaviour
         healthBar.SetMaxHealth(currentHealth);
         expBar.SetMaxExp(experienceCap);
         expBar.SetExp(1);
-        dieAnimation = false;
+        isDead = false;
     }
 
     void Update()
@@ -73,6 +90,9 @@ public class PlayerStats : MonoBehaviour
         {
             isInvincible = false;
         }
+
+        Recover();
+        healthBar.SetHealth(currentHealth);
     }
 
     public void IncreaseExperience(int amount)
@@ -100,6 +120,9 @@ public class PlayerStats : MonoBehaviour
             }
             experienceCap += experienceCapIncrease;
             pauseMenu.ShowLvlUpMenu();
+            //delete this if not working
+            wpmng.RandomizeRewards();
+
             expBar.SetMaxExp(experienceCap);
             expBar.SetExp(experience);
         }
@@ -111,6 +134,7 @@ public class PlayerStats : MonoBehaviour
         {
             currentHealth -= dmg;
             healthBar.SetHealth(currentHealth);
+            flashEffect.Flash(flashColors);
 
             invincibilityTimer = invincibilityDuration;
             isInvincible = true;
@@ -118,13 +142,23 @@ public class PlayerStats : MonoBehaviour
             if (currentHealth <= 0)
             {
                 Kill();
-                dieAnimation = true;
             }
         }
     }
 
     public void Kill()
     {
+        isDead = true;
+
+        float animationDelay = am.GetCurrentAnimatorStateInfo(0).length;
+        StartCoroutine(DelayedEndGame(animationDelay));
+    }
+
+    private IEnumerator DelayedEndGame(float delay)
+    {
+        // Wait for 2 seconds before ending the game
+        yield return new WaitForSeconds(delay);
+
         FindObjectOfType<PauseMenu>().EndGame();
     }
 
@@ -140,6 +174,21 @@ public class PlayerStats : MonoBehaviour
                 currentHealth = characterData.MaxHealth;
             }
 
+        }
+    }
+
+    void Recover()
+    {
+        // While the characters health is below the maxHealth, heal the caracter by the recovery amount
+        if(currentHealth < characterData.MaxHealth)
+        {
+            currentHealth += currentRecovery * Time.deltaTime;
+
+            // if the healing would go over the maxHealth, set it as the max health
+            if (currentHealth > characterData.MaxHealth)
+            {
+                currentHealth = characterData.MaxHealth;
+            }
         }
     }
 }

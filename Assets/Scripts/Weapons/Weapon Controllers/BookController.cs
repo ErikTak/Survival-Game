@@ -4,34 +4,32 @@ using UnityEngine;
 
 public class BookController : WeaponController
 {
-    public int numBooks;
-    public List<GameObject> bookList = new List<GameObject>();
-    public float radius;
-    public float rotationSpeed;
-    
-    protected override void Start()
-    {
 
-    }
+    private List<GameObject> books = new List<GameObject>(); // List to hold the book objects
+
     protected override void Attack()
     {
         base.Attack();
 
-        for (int i = 0; i < numBooks; ++i)
+        for (int i = 0; i < weapons[currentWeaponIndex].ProjCount; ++i)
         {
-            // This code spawns circular formation of objects, calculates angle and position for each, creates instances of prefab, sets as child of script object, and adds to bookList.
-            
-            float angle = i * Mathf.PI * 2f / numBooks;
-            Vector3 position = transform.position + new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * radius;
-            GameObject spawnedBook = Instantiate(weaponData.Prefab, position, Quaternion.identity);
-            spawnedBook.transform.parent = transform; // Reference and set direction
-            bookList.Add(spawnedBook);
+            float angle = i * Mathf.PI * 2f / weapons[currentWeaponIndex].ProjCount; // Calculate the angle between books
+            float x = Mathf.Cos(angle) * weapons[currentWeaponIndex].OffsetRadius; // Calculate the x position of the book on the ellipse
+            float y = Mathf.Sin(angle) * weapons[currentWeaponIndex].OffsetRadius; // Calculate the y position of the book on the ellipse
+            Vector3 pos = transform.position + new Vector3(x, y, 0f); // Calculate the position of the book on the ellipse
+            GameObject book = Instantiate(weapons[currentWeaponIndex].Prefab, pos, Quaternion.identity); // Instantiate the book
+            book.transform.parent = transform; // Set the parent of the book to the controller object
+            books.Add(book); // Add the book to the list
         }
+    }
+
+    protected override void Start()
+    {
+        base.Start();
     }
 
     protected override void Update()
     {
         base.Update();
-        transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
     }
 }

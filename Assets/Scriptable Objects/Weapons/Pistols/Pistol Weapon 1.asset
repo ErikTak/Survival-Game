@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3afb73ad2b49ee7468fe4bef99e07339, type: 3}
+  m_Name: Pistol Weapon 1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8801865291643520016, guid: 301f16fbf33a382458c9949f1f7d9eb6, type: 3}
+  damage: 5
+  speed: 2
+  cooldownDuration: 2
+  pierce: 1
+  projCount: 5
+  offsetRadius: 0.5
+  projDelay: 0.1
+  weaponName: 
+  weaponDescription: 
+  isEnabled: 0
+  weaponArtwork: {fileID: 0}

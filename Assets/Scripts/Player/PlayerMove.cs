@@ -6,19 +6,23 @@ public class PlayerMove : MonoBehaviour
 {
 
     // Movement
-    [HideInInspector] public float lastHorizontalVector;
-    [HideInInspector] public float lastVerticalVector;
-    [HideInInspector] public Vector2 moveDir;
-    [HideInInspector] public Vector2 lastMovedVector;
+    [HideInInspector]
+    public float lastHorizontalVector;
+    [HideInInspector]
+    public float lastVerticalVector;
+    [HideInInspector]
+    public Vector2 moveDir;
+    [HideInInspector]
+    public Vector2 lastMovedVector;
 
     // References
     Rigidbody2D rb;
-    public CharacterScriptableObject characterData;
-
+    PlayerStats player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GetComponent<PlayerStats>();
         rb = GetComponent<Rigidbody2D>();
         lastMovedVector = new Vector2(1, 0f); // If we didn't move at the start of the game
     }
@@ -61,6 +65,6 @@ public class PlayerMove : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = new Vector2(moveDir.x * characterData.MoveSpeed, moveDir.y * characterData.MoveSpeed);
+        rb.velocity = new Vector2(moveDir.x * player.characterData.MoveSpeed, moveDir.y * player.characterData.MoveSpeed);
     }
 }

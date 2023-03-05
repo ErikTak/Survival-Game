@@ -4,17 +4,9 @@ using UnityEngine;
 
 public class SpearController : WeaponController
 {
-
-    private GameObject bulletPrefab;
-    private float bulletSpeed;
-
-    private GameObject nearestEnemy;
-
     protected override void Start()
     {
         base.Start();
-        bulletPrefab = weaponData.Prefab;
-        bulletSpeed = weaponData.Speed;
     }
 
     protected override void Attack()
@@ -22,31 +14,22 @@ public class SpearController : WeaponController
         base.Attack();
         FindNearestEnemy();
 
-        if (nearestEnemy != null)
-        {
-            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            Vector2 direction = (nearestEnemy.transform.position - transform.position).normalized;
-            bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
-            float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) -45f;
-            bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
+        StartCoroutine(SpawnSpears());
     }
 
-
-    void FindNearestEnemy()
+    IEnumerator SpawnSpears()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        float nearestDistance = Mathf.Infinity;
-
-        foreach (GameObject enemy in enemies)
+        for (int i = 0; i < weapons[currentWeaponIndex].ProjCount; ++i)
         {
-            float distance = Vector2.Distance(transform.position, enemy.transform.position);
-
-            if (distance < nearestDistance)
+            if (nearestEnemy != null)
             {
-                nearestDistance = distance;
-                nearestEnemy = enemy;
+                GameObject bullet = Instantiate(weapons[currentWeaponIndex].Prefab, transform.position, Quaternion.identity);
+                Vector2 direction = (nearestEnemy.transform.position - transform.position).normalized;
+                bullet.GetComponent<Rigidbody2D>().velocity = direction * weapons[currentWeaponIndex].Speed;
+                float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) + 135f;
+                bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                yield return new WaitForSeconds(weapons[currentWeaponIndex].ProjDelay);
             }
         }
     }

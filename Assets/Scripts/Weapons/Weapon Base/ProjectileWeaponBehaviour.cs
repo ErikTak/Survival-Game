@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProjectileWeaponBehaviour : MonoBehaviour
 {
     public WeaponScriptableObject weaponData;
+    public GameObject explosion;
 
     protected Vector3 direction;
     public float destroyAfterSeconds;
@@ -32,56 +33,17 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     {
         direction = dir;
 
-        float dirx = direction.x;
-        float diry = direction.y;
-
         Vector3 scale = transform.localScale;
         Vector3 rotation = transform.rotation.eulerAngles;
 
-        // left
-        if (dirx < 0 && diry == 0)
+        if (direction != Vector3.zero)
         {
-            scale.x = scale.x * -1;
-            scale.y = scale.y * -1;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            rotation.z = angle;
         }
-        // up
-        else if (dirx == 0 && diry > 0)
-        {
-            scale.x = scale.x * -1;
-        }
-        // down
-        else if (dirx == 0 && diry < 0)
-        {
-            scale.y = scale.y * -1;
-        }
-        // right up
-        else if (dirx > 0 && diry > 0)
-        {
-            rotation.z = 0f;
-        }
-        // right down
-        else if (dirx > 0 && diry < 0)
-        {
-            rotation.z = -90f;
-        }
-        // left up
-        else if (dirx < 0 && diry > 0)
-        {
-            scale.x = scale.x * -1;
-            scale.y = scale.y * -1;
-            rotation.z = -90f;
-        }
-        // left down
-        else if (dirx < 0 && diry < 0)
-        {
-            scale.x = scale.x * -1;
-            scale.y = scale.y * -1;
-            rotation.z = 0f;
-        }
-
 
         transform.localScale = scale;
-        transform.rotation = Quaternion.Euler(rotation); // Can't simply set the vector because cannot convert
+        transform.rotation = Quaternion.Euler(rotation);
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D col)
@@ -89,9 +51,12 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         // Refference the script from the collided collider and deal damage using TakeDamage()
         if (col.CompareTag("Enemy"))
         {
-            EnemyStats enemy = col.GetComponent<EnemyStats>();
-            enemy.TakeDamage(currentDamage); // Make sure to use currentDamage instead of weaponData.damage in case of damage multipliers
+            EnemyStats enemyS = col.GetComponent<EnemyStats>();
+            EnemyMove enemyM = col.GetComponent<EnemyMove>();
+            enemyS.TakeDamage(currentDamage); // Make sure to use currentDamage instead of weaponData.damage in case of damage multipliers
+            enemyM.Knockback(currentDamage); // Send the enemy back based on the damage number
             ReducePierce();
+            Instantiate(explosion, transform.position, Quaternion.identity);
         }
         else if (col.CompareTag("Prop"))
         {
@@ -111,5 +76,4 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }

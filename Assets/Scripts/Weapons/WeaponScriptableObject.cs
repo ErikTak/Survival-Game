@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="WeaponScriptableObject", menuName ="ScriptableObjects/Weapon")]
+[CreateAssetMenu(fileName = "WeaponScriptableObject", menuName = "ScriptableObjects/Weapon")]
 
 public class WeaponScriptableObject : ScriptableObject
 {
@@ -18,12 +18,40 @@ public class WeaponScriptableObject : ScriptableObject
     [SerializeField]
     float speed;
     public float Speed { get => speed; private set => speed = value; }
-    
+
     [SerializeField]
     float cooldownDuration;
     public float CooldownDuration { get => cooldownDuration; private set => cooldownDuration = value; }
-    
+
     [SerializeField]
     int pierce;
     public int Pierce { get => pierce; private set => pierce = value; }
+
+    [SerializeField]
+    int projCount;
+    public int ProjCount { get => projCount; private set => projCount = value; }
+
+    [SerializeField]
+    float offsetRadius;
+    public float OffsetRadius { get => offsetRadius; private set => offsetRadius = value; }
+
+    [SerializeField]
+    float projDelay;
+    public float ProjDelay { get => projDelay; private set => projDelay = value; }
+
+    [SerializeField]
+    string weaponName;
+    public string WeaponName { get => weaponName; private set => weaponName = value; }
+
+    [SerializeField]
+    string weaponDescription;
+    public string WeaponDescription { get => weaponDescription; private set => weaponDescription = value; }
+
+    [SerializeField]
+    bool isEnabled;
+
+    [SerializeField]
+    Sprite weaponArtwork;
+    public Sprite WeaponArtwork { get => weaponArtwork; private set => weaponArtwork = value; }
+
 }
