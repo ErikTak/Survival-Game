@@ -7,6 +7,7 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] private ColoredFlash flashEffect;
     [SerializeField] private Color flashColors;
 
+    public GameUiElements scoreUI;
     public EnemyScriptableObject enemyData;
     public HealthBar healthBar;
 
@@ -17,12 +18,15 @@ public class EnemyStats : MonoBehaviour
     public float currentHealth;
     [HideInInspector]
     public float currentDamage;
+    [HideInInspector]
+    public int currentValue;
 
     public float despawnDistance = 40f;
     Transform player;
 
     void Awake()
     {
+        currentValue = enemyData.ScoreValue;
         currentMoveSpeed = enemyData.MoveSpeed;
         currentHealth = enemyData.MaxHealth;
         currentDamage = enemyData.Damage;
@@ -31,6 +35,7 @@ public class EnemyStats : MonoBehaviour
 
     void Start()
     {
+        scoreUI = FindObjectOfType<GameUiElements>();
         player = FindObjectOfType<PlayerStats>().transform;
     }
 
@@ -80,6 +85,7 @@ public class EnemyStats : MonoBehaviour
     {
         EnemySpawner es = FindObjectOfType<EnemySpawner>();
         es.OnEnemyKilled();
+        scoreUI.CountScore(currentValue);
     }
 
     void ReturnEnemy()

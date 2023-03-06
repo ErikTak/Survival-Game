@@ -15,3 +15,4 @@ MonoBehaviour:
   moveSpeed: 1
   maxHealth: 20
   damage: 30
+  scoreValue: 5

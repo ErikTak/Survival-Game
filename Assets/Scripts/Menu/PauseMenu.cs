@@ -46,7 +46,17 @@ public class PauseMenu : MonoBehaviour
 
     public void EndGameMenu()
     {
+        // First activate the End Game Menu
         endGameMenuUI.SetActive(true);
+
+        // Then get reference of the EndGameMenu and The InGameUI
+        EndGameMenu egm = FindObjectOfType<EndGameMenu>(); ;
+        GameUiElements guiE = FindObjectOfType<GameUiElements>();
+
+        // Then set the HighScore in the EndGameMenu
+        egm.DisplayScores(guiE.score);
+
+        // Then disable the InGameUI
         inGameUI.SetActive(false);
         Time.timeScale = 0f;
         gameIsPaused = true;

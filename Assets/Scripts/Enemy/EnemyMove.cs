@@ -6,6 +6,8 @@ public class EnemyMove : MonoBehaviour
 {
     EnemyStats enemy;
     Transform player;
+    SpriteRenderer sr;
+
     float knockbackDistance; // Distance the enemy will be knocked back when hit
 
     // Decide what pattern the enemy should move in
@@ -14,6 +16,10 @@ public class EnemyMove : MonoBehaviour
     private float radius; // Radius of the circle movement
     private float angle; // Starting angle for the movement
     private int clockwiseDirection; // Direction of movement
+
+    // Store the previous move direction for flipping the sprite
+
+    private Vector3 previousPosition;
 
     public enum Pattern
     {
@@ -27,6 +33,9 @@ public class EnemyMove : MonoBehaviour
     {
         enemy = GetComponent<EnemyStats>();
         player = FindObjectOfType<PlayerMove>().transform;
+        sr = GetComponent<SpriteRenderer>();
+
+        previousPosition = transform.position;
 
         if (movePattern == Pattern.Circle)
         {
@@ -57,6 +66,24 @@ public class EnemyMove : MonoBehaviour
         {
             Circle();
         }
+
+
+        // SPRITE FLIP
+        // Calculate the direction of movement and flip the sprite accordingly
+        Vector3 moveDirection = transform.position - previousPosition;
+        moveDirection.Normalize();
+
+        if (moveDirection.x < 0)
+        {
+            sr.flipX = true;
+        }
+        else
+        {
+            sr.flipX = false;
+        }
+
+        // Store the current position as the previous position for the next frame
+        previousPosition = transform.position;
     }
 
     public void Knockback(float damage)

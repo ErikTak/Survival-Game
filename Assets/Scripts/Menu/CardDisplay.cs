@@ -23,7 +23,7 @@ public class CardDisplay : MonoBehaviour
 
     public void SetCardDetails()
     {
-        Debug.Log(weapon.WeaponDescription + weapon.WeaponDescription);
+        // Debug.Log(weapon.WeaponDescription + weapon.WeaponDescription);
         nameText.text = weapon.WeaponName;
         descriptionText.text = weapon.WeaponDescription;
         artworkImage.sprite = weapon.WeaponArtwork;
