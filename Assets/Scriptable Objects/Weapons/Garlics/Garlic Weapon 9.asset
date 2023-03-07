@@ -21,6 +21,7 @@ MonoBehaviour:
   offsetRadius: 0
   projDelay: 0
   weaponName: Garlic +5
+  upgradeNum: 9
   weaponDescription: Garlic +5
   isEnabled: 0
   weaponArtwork: {fileID: 1794736812, guid: 8fbb8855647a090418df6b27d03185ec, type: 3}

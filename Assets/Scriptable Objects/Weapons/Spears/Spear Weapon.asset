@@ -21,7 +21,8 @@ MonoBehaviour:
   offsetRadius: 0
   projDelay: 0.1
   weaponName: Spear Weapon
+  upgradeNum: 0
   weaponDescription: Enable a spear projectile that automatically homes to the nearest
     enemy
   isEnabled: 0
-  weaponArtwork: {fileID: -357260857, guid: 8fbb8855647a090418df6b27d03185ec, type: 3}
+  weaponArtwork: {fileID: -1465263561, guid: b8ab1fbb681c730438eb57fefbf1b33e, type: 3}

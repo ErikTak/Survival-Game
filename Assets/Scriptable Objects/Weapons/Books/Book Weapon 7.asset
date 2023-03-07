@@ -21,6 +21,7 @@ MonoBehaviour:
   offsetRadius: 5
   projDelay: 0
   weaponName: Book +5
+  upgradeNum: 7
   weaponDescription: Book +5
   isEnabled: 0
   weaponArtwork: {fileID: 1493378937, guid: 8fbb8855647a090418df6b27d03185ec, type: 3}

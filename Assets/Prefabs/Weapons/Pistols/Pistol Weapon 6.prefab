@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 533dc63d3fe37ee4fbf8bbc8c0c39a46, type: 2}
+  explosion: {fileID: 5099530623826267333, guid: 1d6cee4677c26cf44b238c41e7ca492e, type: 3}
   destroyAfterSeconds: 5
 --- !u!95 &-1441473942254351334
 Animator:

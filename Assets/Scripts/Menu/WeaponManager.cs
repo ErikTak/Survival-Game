@@ -30,7 +30,16 @@ public class WeaponManager : MonoBehaviour
             CardDisplay cardDisplay = upgradeButtonObjects[i].GetComponent<CardDisplay>();
             if (cardDisplay != null)
             {
-                WeaponScriptableObject weapon = weaponControllers[randomIndex].GetComponent<WeaponController>().weapons[weaponControllers[randomIndex].GetComponent<WeaponController>().currentWeaponIndex];
+                WeaponScriptableObject weapon;
+
+                if (!weaponControllers[randomIndex].activeSelf)
+                {
+                    weapon = weaponControllers[randomIndex].GetComponent<WeaponController>().weapons[weaponControllers[randomIndex].GetComponent<WeaponController>().currentWeaponIndex];
+                }
+                else
+                {
+                    weapon = weaponControllers[randomIndex].GetComponent<WeaponController>().weapons[weaponControllers[randomIndex].GetComponent<WeaponController>().currentWeaponIndex + 1];
+                }
                 cardDisplay.weapon = weapon;
                 cardDisplay.weaponController = weaponControllers[randomIndex];
                 cardDisplay.SetCardDetails();
@@ -71,7 +80,4 @@ public class WeaponManager : MonoBehaviour
             imageDisplay.SetInventoryImage();
         }
     }
-
-
-
 }

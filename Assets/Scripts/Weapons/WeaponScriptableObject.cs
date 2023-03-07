@@ -44,6 +44,10 @@ public class WeaponScriptableObject : ScriptableObject
     public string WeaponName { get => weaponName; private set => weaponName = value; }
 
     [SerializeField]
+    int upgradeNum;
+    public int UpgradeNum { get => upgradeNum; private set => upgradeNum = value; }
+
+    [SerializeField]
     string weaponDescription;
     public string WeaponDescription { get => weaponDescription; private set => weaponDescription = value; }
 

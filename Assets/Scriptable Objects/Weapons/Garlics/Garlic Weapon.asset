@@ -20,7 +20,8 @@ MonoBehaviour:
   projCount: 0
   offsetRadius: 0
   projDelay: 0
-  weaponName: Garlic +5
-  weaponDescription: Garlic +5
+  weaponName: Garlic 0
+  upgradeNum: 0
+  weaponDescription: Garlic 0
   isEnabled: 0
   weaponArtwork: {fileID: 1794736812, guid: 8fbb8855647a090418df6b27d03185ec, type: 3}

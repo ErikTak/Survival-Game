@@ -20,7 +20,8 @@ MonoBehaviour:
   projCount: 2
   offsetRadius: 30
   projDelay: 0.1
-  weaponName: Spear 0
-  weaponDescription: Spear 0
+  weaponName: Spear +1
+  upgradeNum: 1
+  weaponDescription: Spear +1
   isEnabled: 0
   weaponArtwork: {fileID: -357260857, guid: 8fbb8855647a090418df6b27d03185ec, type: 3}

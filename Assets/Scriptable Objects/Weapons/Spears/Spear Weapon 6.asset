@@ -21,6 +21,7 @@ MonoBehaviour:
   offsetRadius: 0
   projDelay: 0.1
   weaponName: Spear +5
+  upgradeNum: 6
   weaponDescription: Spear +5
   isEnabled: 0
   weaponArtwork: {fileID: -357260857, guid: 8fbb8855647a090418df6b27d03185ec, type: 3}

@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 8f59a40ee5046d640b795f53c4ea6b24, type: 2}
+  explosion: {fileID: 5099530623826267333, guid: 1d6cee4677c26cf44b238c41e7ca492e, type: 3}
   destroyAfterSeconds: 3
 --- !u!58 &-4373351496820416100
 CircleCollider2D:

@@ -21,6 +21,7 @@ MonoBehaviour:
   offsetRadius: 30
   projDelay: 0.1
   weaponName: 
+  upgradeNum: 10
   weaponDescription: 
   isEnabled: 0
   weaponArtwork: {fileID: 0}

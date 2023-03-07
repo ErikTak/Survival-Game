@@ -12,6 +12,7 @@ public class CardDisplay : MonoBehaviour
 
     public TMPro.TextMeshProUGUI nameText;
     public TMPro.TextMeshProUGUI descriptionText;
+    public TMPro.TextMeshProUGUI upgradeNumber;
 
     public Image artworkImage;
 
@@ -27,6 +28,8 @@ public class CardDisplay : MonoBehaviour
         nameText.text = weapon.WeaponName;
         descriptionText.text = weapon.WeaponDescription;
         artworkImage.sprite = weapon.WeaponArtwork;
+
+        upgradeNumber.text = "+" + weapon.UpgradeNum.ToString();
     }
 
     public void UpgradeWeapon()
