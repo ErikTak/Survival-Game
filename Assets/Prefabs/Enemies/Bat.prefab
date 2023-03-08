@@ -190,7 +190,7 @@ MonoBehaviour:
     dropRate: 100
   - name: Health Pickup
     itemPrefab: {fileID: 3922411103447907656, guid: b93c705806223b74bbc1f3a7cfd68645, type: 3}
-    dropRate: 0
+    dropRate: 100
 --- !u!114 &8006294803555600632
 MonoBehaviour:
   m_ObjectHideFlags: 0

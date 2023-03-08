@@ -13,6 +13,11 @@ public class PauseMenu : MonoBehaviour
     bool gameHasEnded = false;
     public GameObject[] enemiesToDestroy;
 
+    private void Start()
+    {
+        Resume();
+    }
+
     void Update()
     {
         // Open pausemenu if ESC is pressed and End Game Menu UI is not active

@@ -10,6 +10,8 @@ public class PlayerStats : MonoBehaviour
     public HealthBar healthBar;
     public ExperienceBar expBar;
     public PauseMenu pauseMenu;
+    
+    public SFXController sfxController;
 
     //delete this if not working
     public WeaponManager wpmng;
@@ -106,6 +108,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (experience >= experienceCap)
         {
+            sfxController.Play("LevelUp");
             level++;
             experience -= experienceCap;
 
@@ -130,8 +133,10 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
-        if (!isInvincible)
+        if (!isInvincible && !isDead)
         {
+            //sfxController.PlayerTakeDamageSoundEffect();
+
             currentHealth -= dmg;
             healthBar.SetHealth(currentHealth);
             flashEffect.Flash(flashColors);
@@ -150,6 +155,8 @@ public class PlayerStats : MonoBehaviour
     {
         isDead = true;
 
+        //sfxController.PlayerDeathSoundEffect();
+
         float animationDelay = am.GetCurrentAnimatorStateInfo(0).length;
         StartCoroutine(DelayedEndGame(animationDelay));
     }
@@ -159,11 +166,14 @@ public class PlayerStats : MonoBehaviour
         // Wait for 2 seconds before ending the game
         yield return new WaitForSeconds(delay);
 
+        //sfxController.GameOverSoundEffect();
         FindObjectOfType<PauseMenu>().EndGame();
     }
 
     public void RestoreHealth(float amount)
     {
+        //sfxController.RestoreHealthSoundEffect();
+
         if (currentHealth < characterData.MaxHealth)
         {
             currentHealth += amount;

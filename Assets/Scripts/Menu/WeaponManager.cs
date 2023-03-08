@@ -27,6 +27,8 @@ public class WeaponManager : MonoBehaviour
             }
             usedCards[randomIndex] = 1;
 
+            Debug.Log(upgradeButtonObjects.Length);
+
             CardDisplay cardDisplay = upgradeButtonObjects[i].GetComponent<CardDisplay>();
             if (cardDisplay != null)
             {
@@ -50,7 +52,6 @@ public class WeaponManager : MonoBehaviour
             }
 
         }
-        //FindObjectOfType<CardDisplay>().SetCardDetails();
     }
 
     public void SetInventoryImage()
