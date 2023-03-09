@@ -29,6 +29,9 @@ public class SpearController : WeaponController
                 bullet.GetComponent<Rigidbody2D>().velocity = direction * weapons[currentWeaponIndex].Speed;
                 float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) + 135f;
                 bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+                FindObjectOfType<SFXController>().Play("SpearWepSFX");
+
                 yield return new WaitForSeconds(weapons[currentWeaponIndex].ProjDelay);
             }
         }

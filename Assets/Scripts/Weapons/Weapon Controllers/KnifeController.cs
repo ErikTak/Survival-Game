@@ -28,6 +28,9 @@ public class KnifeController : WeaponController
             Vector2 spawnPosition = (Vector2)transform.position + new Vector2(Random.Range(-offsetRange, offsetRange), Random.Range(-offsetRange, offsetRange));
             spawnedKnife.transform.position = spawnPosition; // Assign the position to be the same as this object which is parented to the player
             spawnedKnife.GetComponent<KnifeBehaviour>().DirectionChecker(pm.lastMovedVector); // Reference and set direction
+
+            FindObjectOfType<SFXController>().Play("KnifeWepSFX");
+
             yield return new WaitForSeconds(weapons[currentWeaponIndex].ProjDelay);
         }
     }

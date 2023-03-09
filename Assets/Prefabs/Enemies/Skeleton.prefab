@@ -460,6 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f3e7b1abe81dc04a8b0f77d9a8b2e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movePattern: 0
 --- !u!114 &7537864349463007087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,11 +475,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashEffect: {fileID: -4603683121075503688}
   flashColors: {r: 0, g: 0, b: 0, a: 1}
+  scoreUI: {fileID: 0}
   enemyData: {fileID: 11400000, guid: 972d648b609086e4998d657debbd5107, type: 2}
   healthBar: {fileID: 5472970143501868076}
   currentMoveSpeed: 0
   currentHealth: 0
   currentDamage: 0
+  currentValue: 0
   despawnDistance: 40
 --- !u!114 &-5852993118933715744
 MonoBehaviour:
@@ -495,7 +498,7 @@ MonoBehaviour:
   drops:
   - name: Blue Gem
     itemPrefab: {fileID: 7831860376292965640, guid: 2f31af4c5a375d440b248b7237dbc28e, type: 3}
-    dropRate: 50
+    dropRate: 98
 --- !u!114 &-4603683121075503688
 MonoBehaviour:
   m_ObjectHideFlags: 0

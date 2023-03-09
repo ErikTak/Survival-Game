@@ -14195,6 +14195,90 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: TakeDamage
+    clip: {fileID: 8300000, guid: 1ed8fb76fc64e4e46847348138782234, type: 3}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: acbcb75601b0082458fda8807f67c813, type: 3}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: HealUp
+    clip: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: b4ca459c38f1a44b4bd8b479beee0bb0, type: 3}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Explosion
+    clip: {fileID: 8300000, guid: e1c26768bdaed0b478df174102e2bc60, type: 3}
+    volume: 0.222
+    pitch: 3
+    loop: 0
+    source: {fileID: 0}
+  - name: KnifeWepSFX
+    clip: {fileID: 8300000, guid: 06ada5590eba8d6489b36c6f3c54ff78, type: 3}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GarlicWepSFX
+    clip: {fileID: 8300000, guid: 83829ff414f47a048b5387e4ab33571c, type: 3}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SpearWepSFX
+    clip: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BookWepSFX
+    clip: {fileID: 8300000, guid: b1b9c1f0ea1fcae439ed1a4d44ff05fd, type: 3}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PistolWepSFX
+    clip: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SideCannonWepSFX
+    clip: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
+    volume: 0.222
+    pitch: 2
+    loop: 0
+    source: {fileID: 0}
+  - name: ArcaneTrapWepSFX
+    clip: {fileID: 8300000, guid: 1d74880bed4586644a16a79a2d9dc8af, type: 3}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StarshotWepSFX
+    clip: {fileID: 8300000, guid: 78419f98379502c4dbfb2774bc94e7c1, type: 3}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: 769bb7c0fea23094b8c8ae4851f203e5, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!4 &1008529248
 Transform:
   m_ObjectHideFlags: 0
@@ -20476,7 +20560,7 @@ MonoBehaviour:
   healthBar: {fileID: 787220958}
   expBar: {fileID: 8748603555205334456}
   pauseMenu: {fileID: 618344221}
-  sfxController: {fileID: 1008529247}
+  sfxController: {fileID: 0}
   wpmng: {fileID: 461828026}
   isDead: 0
   flashEffect: {fileID: 1486781161}
@@ -20510,7 +20594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a45a363d13ea8489bbe47983ae278f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 3}
+  flashMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   duration: 0.1
 --- !u!1 &1489291994
 GameObject:
@@ -25901,6 +25985,42 @@ MonoBehaviour:
   waves:
   - waveName: Wave 1
     enemyGroups:
+    - enemyName: Bat
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 1873232008215357874, guid: 02bd175aa9f439b44852b863f3a87ff6, type: 3}
+    - enemyName: Bat
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 1873232008215357874, guid: cbfe4169947d243418c5059ee69633bd, type: 3}
+    - enemyName: Bat
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 1873232008215357874, guid: ea7f890a401f89d4388b4bfb1da053a4, type: 3}
+    - enemyName: Bat
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 1873232008215357874, guid: 93bec58319242664290d037eb964e00e, type: 3}
+    - enemyName: Bat
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 1873232008215357874, guid: 2b7e198a167c7854ca1b2e83ed29cfe2, type: 3}
+    - enemyName: Bat
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 1873232008215357874, guid: 02bd175aa9f439b44852b863f3a87ff6, type: 3}
+    - enemyName: Bat
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 1873232008215357874, guid: 02bd175aa9f439b44852b863f3a87ff6, type: 3}
+    - enemyName: Bat
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 1873232008215357874, guid: 02bd175aa9f439b44852b863f3a87ff6, type: 3}
+    - enemyName: Bat
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 1873232008215357874, guid: 02bd175aa9f439b44852b863f3a87ff6, type: 3}
     - enemyName: Bat
       enemyCount: 3
       spawnCount: 0

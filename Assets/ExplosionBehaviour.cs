@@ -9,8 +9,9 @@ public class ExplosionBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<SFXController>().Play("Explosion");
+
         am = GetComponent<Animator>();
-        Debug.Log("start is called on explosionbehaviour");
         float animationDelay = am.GetCurrentAnimatorStateInfo(0).length;
         StartCoroutine(DelayDestroy(animationDelay));
     }

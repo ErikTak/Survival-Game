@@ -43,6 +43,8 @@ public class SideCannonController : WeaponController
             // Set the rotation of the bullet
             float angle = (Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg);
             bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+            FindObjectOfType<SFXController>().Play("SideCannonWepSFX");
         }
     }
 }

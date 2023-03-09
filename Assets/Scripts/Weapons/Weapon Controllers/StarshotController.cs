@@ -49,6 +49,8 @@ public class StarshotController : WeaponController
             Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * projDirectionDownRight)).GetComponent<StarshotBehaviour>().projDirection = projDirectionDownRight;
             Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * projDirectionUpLeft)).GetComponent<StarshotBehaviour>().projDirection = projDirectionUpLeft;
             Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * projDirectionDownLeft)).GetComponent<StarshotBehaviour>().projDirection = projDirectionDownLeft;
+
+            FindObjectOfType<SFXController>().Play("StarshotWepSFX");
         }
     }
 }

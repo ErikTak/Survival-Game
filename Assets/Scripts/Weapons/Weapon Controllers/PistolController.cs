@@ -34,5 +34,7 @@ public class PistolController : WeaponController
         Vector3 shootDirection = (mousePosition - firePoint.position).normalized;
         bullet.GetComponent<Rigidbody2D>().velocity = shootDirection * weapons[currentWeaponIndex].Speed;
         bullet.GetComponent<PistolBehaviour>().DirectionChecker(shootDirection); // Reference and set direction
+
+        FindObjectOfType<SFXController>().Play("PistolWepSFX");
     }
 }

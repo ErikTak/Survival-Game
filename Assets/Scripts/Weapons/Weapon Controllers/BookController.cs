@@ -20,6 +20,8 @@ public class BookController : WeaponController
             GameObject book = Instantiate(weapons[currentWeaponIndex].Prefab, pos, Quaternion.identity); // Instantiate the book
             book.transform.parent = transform; // Set the parent of the book to the controller object
             books.Add(book); // Add the book to the list
+
+            FindObjectOfType<SFXController>().Play("BookWepSFX");
         }
     }
 

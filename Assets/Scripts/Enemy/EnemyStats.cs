@@ -7,9 +7,12 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] private ColoredFlash flashEffect;
     [SerializeField] private Color flashColors;
 
+    Animator am;
     public GameUiElements scoreUI;
     public EnemyScriptableObject enemyData;
     public HealthBar healthBar;
+
+    BoxCollider2D collider;
 
     // Current stats
     [HideInInspector]
@@ -17,15 +20,20 @@ public class EnemyStats : MonoBehaviour
     [HideInInspector]
     public float currentHealth;
     [HideInInspector]
+    public bool isDead;
+    [HideInInspector]
     public float currentDamage;
     [HideInInspector]
     public int currentValue;
 
     public float despawnDistance = 40f;
     Transform player;
+    
 
     void Awake()
     {
+        collider = GetComponent<BoxCollider2D>();
+        am = GetComponent<Animator>();
         currentValue = enemyData.ScoreValue;
         currentMoveSpeed = enemyData.MoveSpeed;
         currentHealth = enemyData.MaxHealth;
@@ -37,6 +45,8 @@ public class EnemyStats : MonoBehaviour
     {
         scoreUI = FindObjectOfType<GameUiElements>();
         player = FindObjectOfType<PlayerStats>().transform;
+
+        isDead = false;
     }
 
     void Update()
@@ -61,6 +71,14 @@ public class EnemyStats : MonoBehaviour
 
     public void Kill()
     {
+        isDead = true;
+        collider.enabled = false;
+        StartCoroutine(DestroyAfterDelay(am.GetCurrentAnimatorStateInfo(0).length));
+    }
+
+    IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         Destroy(gameObject);
     }
 

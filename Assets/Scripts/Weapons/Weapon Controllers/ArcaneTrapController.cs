@@ -33,6 +33,9 @@ public class ArcaneTrapController : WeaponController
             //Vector3 direction = topOfScreenPos - shootPos;
 
             GameObject projectile = Instantiate(weapons[currentWeaponIndex].Prefab, shootPos, Quaternion.identity);
+
+            FindObjectOfType<SFXController>().Play("ArcaneTrapWepSFX");
+
             //projectile.transform.up = direction.normalized;
             //projectile.transform.LookAt(parentPos);
             yield return new WaitForSeconds(weapons[currentWeaponIndex].ProjDelay);

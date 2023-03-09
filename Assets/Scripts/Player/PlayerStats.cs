@@ -61,6 +61,7 @@ public class PlayerStats : MonoBehaviour
 
     void Awake()
     {
+        sfxController = FindObjectOfType<SFXController>();
         am = GetComponent<Animator>();
         // Assign the variables
         currentHealth = characterData.MaxHealth;
@@ -79,6 +80,7 @@ public class PlayerStats : MonoBehaviour
         expBar.SetMaxExp(experienceCap);
         expBar.SetExp(1);
         isDead = false;
+        Debug.Log("playerstats Start is called");
     }
 
     void Update()
@@ -135,7 +137,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (!isInvincible && !isDead)
         {
-            //sfxController.PlayerTakeDamageSoundEffect();
+            sfxController.Play("TakeDamage");
 
             currentHealth -= dmg;
             healthBar.SetHealth(currentHealth);
@@ -155,7 +157,7 @@ public class PlayerStats : MonoBehaviour
     {
         isDead = true;
 
-        //sfxController.PlayerDeathSoundEffect();
+        sfxController.Play("PlayerDeath");
 
         float animationDelay = am.GetCurrentAnimatorStateInfo(0).length;
         StartCoroutine(DelayedEndGame(animationDelay));
@@ -166,13 +168,13 @@ public class PlayerStats : MonoBehaviour
         // Wait for 2 seconds before ending the game
         yield return new WaitForSeconds(delay);
 
-        //sfxController.GameOverSoundEffect();
+        sfxController.Play("GameOver");
         FindObjectOfType<PauseMenu>().EndGame();
     }
 
     public void RestoreHealth(float amount)
     {
-        //sfxController.RestoreHealthSoundEffect();
+        sfxController.Play("HealUp");
 
         if (currentHealth < characterData.MaxHealth)
         {

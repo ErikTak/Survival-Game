@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
+    Animator am;
     EnemyStats enemy;
     Transform player;
     SpriteRenderer sr;
@@ -31,6 +32,7 @@ public class EnemyMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        am = GetComponent<Animator>();
         enemy = GetComponent<EnemyStats>();
         player = FindObjectOfType<PlayerMove>().transform;
         sr = GetComponent<SpriteRenderer>();
@@ -54,36 +56,45 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (movePattern == Pattern.Straight)
+        if (!enemy.isDead)
         {
-            Straight();
-        }
-        else if (movePattern == Pattern.Sshape)
-        {
-            Sshape();
-        }
-        else if (movePattern == Pattern.Circle)
-        {
-            Circle();
-        }
+            am.SetBool("Alive", true);
+
+            if (movePattern == Pattern.Straight)
+            {
+                Straight();
+            }
+            else if (movePattern == Pattern.Sshape)
+            {
+                Sshape();
+            }
+            else if (movePattern == Pattern.Circle)
+            {
+                Circle();
+            }
 
 
-        // SPRITE FLIP
-        // Calculate the direction of movement and flip the sprite accordingly
-        Vector3 moveDirection = transform.position - previousPosition;
-        moveDirection.Normalize();
+            // SPRITE FLIP
+            // Calculate the direction of movement and flip the sprite accordingly
+            Vector3 moveDirection = transform.position - previousPosition;
+            moveDirection.Normalize();
 
-        if (moveDirection.x < 0)
-        {
-            sr.flipX = true;
+            if (moveDirection.x < 0)
+            {
+                sr.flipX = true;
+            }
+            else
+            {
+                sr.flipX = false;
+            }
+
+            // Store the current position as the previous position for the next frame
+            previousPosition = transform.position;
         }
         else
         {
-            sr.flipX = false;
+            am.SetBool("Alive", false);
         }
-
-        // Store the current position as the previous position for the next frame
-        previousPosition = transform.position;
     }
 
     public void Knockback(float damage)
