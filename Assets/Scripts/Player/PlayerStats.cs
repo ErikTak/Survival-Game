@@ -125,7 +125,8 @@ public class PlayerStats : MonoBehaviour
             }
             experienceCap += experienceCapIncrease;
             pauseMenu.ShowLvlUpMenu();
-            //delete this if not working
+
+            // Randomize rewards when leveling up
             wpmng.RandomizeRewards();
 
             expBar.SetMaxExp(experienceCap);
