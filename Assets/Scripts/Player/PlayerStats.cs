@@ -127,7 +127,7 @@ public class PlayerStats : MonoBehaviour
             pauseMenu.ShowLvlUpMenu();
 
             // Randomize rewards when leveling up
-            wpmng.RandomizeRewards();
+            wpmng.RewardTypeChooser();
 
             expBar.SetMaxExp(experienceCap);
             expBar.SetExp(experience);

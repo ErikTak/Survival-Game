@@ -12,7 +12,6 @@ public class WeaponManager : MonoBehaviour
     private void Start()
     {
         SetInventoryImage();
-        RewardTypeChooser();
     }
 
     public void RewardTypeChooser()
@@ -22,14 +21,17 @@ public class WeaponManager : MonoBehaviour
         if (rewardOption == 0)
         {
             Debug.Log("rewardoption is 0");
+
         }
         if (rewardOption == 1)
         {
             Debug.Log("rewardoption is 1");
+            RandomizeOneReward();
         }
         if (rewardOption == 2)
         {
             Debug.Log("rewardoption is 2");
+            RandomizeRewards();
         }
 
     }
