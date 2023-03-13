@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3afb73ad2b49ee7468fe4bef99e07339, type: 3}
-  m_Name: Spear Weapon
+  m_Name: Spear Weapon 0
   m_EditorClassIdentifier: 
   prefab: {fileID: 8385972741447985216, guid: 4d0227b393d6d1b4a9ddfb1c50039f65, type: 3}
-  damage: 5
-  speed: 10
-  cooldownDuration: 1
+  damage: 60
+  speed: 8
+  cooldownDuration: 3.5
+  destroyAfterSeconds: 4
   pierce: 1
   projCount: 1
   offsetRadius: 0
   projDelay: 0.1
-  weaponName: Spear Weapon
+  weaponName: Chilling Flame
   upgradeNum: 0
   weaponDescription: Enable a spear projectile that automatically homes to the nearest
     enemy
-  isEnabled: 0
-  weaponArtwork: {fileID: -1465263561, guid: b8ab1fbb681c730438eb57fefbf1b33e, type: 3}
+  weaponArtwork: {fileID: 21300000, guid: a9a94f37680c2014f895761ce437d0e0, type: 3}

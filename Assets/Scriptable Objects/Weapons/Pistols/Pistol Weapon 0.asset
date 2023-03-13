@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3afb73ad2b49ee7468fe4bef99e07339, type: 3}
-  m_Name: Arcane Trap Weapon
+  m_Name: Pistol Weapon 0
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8385972741447985216, guid: 8aebd30f27d40da4990b9568552a04f7, type: 3}
-  damage: 5
-  speed: 15
-  cooldownDuration: 3
+  prefab: {fileID: 8801865291643520016, guid: b0dac39a825241c4ab516872b1ee92ab, type: 3}
+  damage: 40
+  speed: 8
+  cooldownDuration: 2
+  destroyAfterSeconds: 4
   pierce: 1
-  projCount: 2
-  offsetRadius: 30
-  projDelay: 0.1
-  weaponName: Spear 0
-  weaponDescription: Spear 0
-  isEnabled: 0
-  weaponArtwork: {fileID: -357260857, guid: 8fbb8855647a090418df6b27d03185ec, type: 3}
+  projCount: 1
+  offsetRadius: 0
+  projDelay: 0
+  weaponName: Flame Orb
+  upgradeNum: 0
+  weaponDescription: 
+  weaponArtwork: {fileID: 21300000, guid: 0728bd2710ee8fd46b0512608e355384, type: 3}

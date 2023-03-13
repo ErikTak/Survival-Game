@@ -23,34 +23,83 @@ public class StarshotController : WeaponController
     void Shoot()
     {
         WeaponScriptableObject currentWeapon = weapons[currentWeaponIndex];
-        float projAngleIncrement = 360f / (currentWeapon.ProjCount * 2);
-        Vector2 projDirection = transform.right;
 
-        for (int i = 0; i < currentWeapon.ProjCount; i++)
+        Debug.Log("ProjCount: " + currentWeapon.ProjCount);
+
+        // Define firing directions based on the projectile count of the weapon
+        List<Vector2> firingDirections = new List<Vector2>();
+        switch (currentWeapon.ProjCount)
         {
-            // Shoot in four directions (up, right, down, left)
-            Vector2 projDirectionUp = Quaternion.Euler(0f, 0f, i * projAngleIncrement) * projDirection;
-            Vector2 projDirectionRight = Quaternion.Euler(0f, 0f, (i * projAngleIncrement) + 90f) * projDirection;
-            Vector2 projDirectionDown = Quaternion.Euler(0f, 0f, (i * projAngleIncrement) + 180f) * projDirection;
-            Vector2 projDirectionLeft = Quaternion.Euler(0f, 0f, (i * projAngleIncrement) + 270f) * projDirection;
-
-            // Shoot in four diagonal directions (up-right, down-right, up-left, down-left)
-            Vector2 projDirectionUpRight = Quaternion.Euler(0f, 0f, (i * projAngleIncrement) + 45f) * projDirection;
-            Vector2 projDirectionDownRight = Quaternion.Euler(0f, 0f, (i * projAngleIncrement) + 135f) * projDirection;
-            Vector2 projDirectionUpLeft = Quaternion.Euler(0f, 0f, (i * projAngleIncrement) + 225f) * projDirection;
-            Vector2 projDirectionDownLeft = Quaternion.Euler(0f, 0f, (i * projAngleIncrement) + 315f) * projDirection;
-
-            // Instantiate projectiles in all eight directions
-            Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * projDirectionUp)).GetComponent<StarshotBehaviour>().projDirection = projDirectionUp;
-            Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * projDirectionRight)).GetComponent<StarshotBehaviour>().projDirection = projDirectionRight;
-            Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * projDirectionDown)).GetComponent<StarshotBehaviour>().projDirection = projDirectionDown;
-            Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * projDirectionLeft)).GetComponent<StarshotBehaviour>().projDirection = projDirectionLeft;
-            Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * projDirectionUpRight)).GetComponent<StarshotBehaviour>().projDirection = projDirectionUpRight;
-            Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * projDirectionDownRight)).GetComponent<StarshotBehaviour>().projDirection = projDirectionDownRight;
-            Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * projDirectionUpLeft)).GetComponent<StarshotBehaviour>().projDirection = projDirectionUpLeft;
-            Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * projDirectionDownLeft)).GetComponent<StarshotBehaviour>().projDirection = projDirectionDownLeft;
-
-            FindObjectOfType<SFXController>().Play("StarshotWepSFX");
+            case 1:
+                firingDirections.Add(transform.up);
+                break;
+            case 2:
+                firingDirections.Add(transform.up);
+                firingDirections.Add(-transform.right);
+                break;
+            case 3:
+                firingDirections.Add(transform.up);
+                firingDirections.Add(-transform.right);
+                firingDirections.Add(-transform.up);
+                break;
+            case 4:
+                firingDirections.Add(transform.up);
+                firingDirections.Add(-transform.right);
+                firingDirections.Add(-transform.up);
+                firingDirections.Add(transform.right);
+                break;
+            case 5:
+                firingDirections.Add(transform.up);
+                firingDirections.Add(-transform.right);
+                firingDirections.Add(-transform.up);
+                firingDirections.Add(transform.right);
+                firingDirections.Add(transform.up - transform.right);
+                break;
+            case 6:
+                firingDirections.Add(transform.up);
+                firingDirections.Add(-transform.right);
+                firingDirections.Add(-transform.up);
+                firingDirections.Add(transform.right);
+                firingDirections.Add(transform.up - transform.right);
+                firingDirections.Add(-transform.up - transform.right);
+                break;
+            case 7:
+                firingDirections.Add(transform.up);
+                firingDirections.Add(-transform.right);
+                firingDirections.Add(-transform.up);
+                firingDirections.Add(transform.right);
+                firingDirections.Add(transform.up - transform.right);
+                firingDirections.Add(-transform.up - transform.right);
+                firingDirections.Add(-transform.up + transform.right);
+                break;
+            case 8:
+                firingDirections.Add(transform.up);
+                firingDirections.Add(-transform.right);
+                firingDirections.Add(-transform.up);
+                firingDirections.Add(transform.right);
+                firingDirections.Add((transform.up - transform.right) /2);
+                firingDirections.Add((-transform.up - transform.right) /2);
+                firingDirections.Add((-transform.up + transform.right) / 2);
+                firingDirections.Add((transform.up + transform.right) / 2);
+                break;
+            default: // For projectile counts > 7
+                //firingDirections.Add(transform.up);
+                for (int i = 1; i < currentWeapon.ProjCount; i++)
+                {
+                    float angle = (i - 1) * 360f / (currentWeapon.ProjCount - 1);
+                    Vector2 direction = Quaternion.Euler(0f, 0f, angle) * transform.up;
+                    firingDirections.Add(direction);
+                }
+                break;
         }
+
+        // Instantiate projectiles in all firing directions
+        foreach (Vector2 direction in firingDirections)
+        {
+            Instantiate(currentWeapon.Prefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0f, 0f, 90f) * direction))
+                .GetComponent<StarshotBehaviour>().projDirection = direction;
+        }
+
+        FindObjectOfType<SFXController>().Play("StarshotWepSFX");
     }
 }

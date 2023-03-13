@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8143892462486081085}
   - component: {fileID: 1174262312135500984}
-  - component: {fileID: 4889036288675307117}
-  - component: {fileID: 2737578889691783386}
   - component: {fileID: 4476620429334152983}
   - component: {fileID: -5947501226413469281}
+  - component: {fileID: 5801674528808055421}
+  - component: {fileID: 7100254107289737732}
   m_Layer: 0
-  m_Name: Spear Weapon
+  m_Name: Arcane Trap Weapon 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8385972741447985216}
-  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1174262312135500984
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 1033849359
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a9a94f37680c2014f895761ce437d0e0, type: 3}
-  m_Color: {r: 0.17723632, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b63136f2838a6b241aed052b88ae07e6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -88,49 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4889036288675307117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8385972741447985216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3eb7700b325f0f4ab18d83cb6a2746d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 78950c717a8292b4588014654fddd20b, type: 2}
-  explosion: {fileID: 5099530623826267333, guid: 1d6cee4677c26cf44b238c41e7ca492e, type: 3}
-  destroyAfterSeconds: 3
---- !u!60 &2737578889691783386
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8385972741447985216}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.90625, y: 4.6875}
-    newSize: {x: 0.75, y: 0.75}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.2482448, y: 1.2629098}
-      - {x: 1.5960268, y: 0.91437674}
-      - {x: -0.799107, y: -1.1671343}
 --- !u!50 &4476620429334152983
 Rigidbody2D:
   serializedVersion: 4
@@ -162,7 +119,7 @@ Animator:
   m_GameObject: {fileID: 8385972741447985216}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 57f85078825957c44b4a1060b09427f4, type: 2}
+  m_Controller: {fileID: 9100000, guid: cbcf8a747041f664ea1be1226382c8fd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -172,3 +129,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5801674528808055421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385972741447985216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13346f60b0546c6419c7497a96516f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 454e12346a2bc174e84e2629423473e9, type: 2}
+  explosion: {fileID: 5099530623826267333, guid: 1d6cee4677c26cf44b238c41e7ca492e, type: 3}
+  destroyAfterSeconds: 10
+--- !u!70 &7100254107289737732
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385972741447985216}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.016261937, y: -0.008163008}
+  m_Size: {x: 6.5769153, y: 1.8149228}
+  m_Direction: 1

@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3afb73ad2b49ee7468fe4bef99e07339, type: 3}
-  m_Name: Starshot Weapon
+  m_Name: SideCannon Weapon 0
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8801865291643520016, guid: a11e4ea5a6b3c1947a0a1d370818b9b4, type: 3}
-  damage: 5
+  prefab: {fileID: 8801865291643520016, guid: 90471dab36b47f743a5427f8f6de8a46, type: 3}
+  damage: 40
   speed: 10
-  cooldownDuration: 2
+  cooldownDuration: 3.5
+  destroyAfterSeconds: 3.5
   pierce: 1
-  projCount: 1
-  offsetRadius: 0.5
-  projDelay: 0.1
-  weaponName: 
+  projCount: 2
+  offsetRadius: 30
+  projDelay: 0
+  weaponName: Firebolt Wand
+  upgradeNum: 0
   weaponDescription: 
-  isEnabled: 0
-  weaponArtwork: {fileID: 0}
+  weaponArtwork: {fileID: 21300000, guid: ad58b108aca0c1545820d99019bd7e5d, type: 3}

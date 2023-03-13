@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3afb73ad2b49ee7468fe4bef99e07339, type: 3}
-  m_Name: Arcane Trap Weapon 8
+  m_Name: Arcane Trap Weapon 0
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8385972741447985216, guid: ad1bf42e6e6796c44bcbb18f3305df79, type: 3}
-  damage: 80
+  prefab: {fileID: 8385972741447985216, guid: 8aebd30f27d40da4990b9568552a04f7, type: 3}
+  damage: 50
   speed: 0
-  cooldownDuration: 3
-  destroyAfterSeconds: 15
+  cooldownDuration: 4
+  destroyAfterSeconds: 10
   pierce: 1
-  projCount: 5
-  offsetRadius: 40
+  projCount: 2
+  offsetRadius: 30
   projDelay: 0.1
   weaponName: Arcane Trap
-  upgradeNum: 8
-  weaponDescription: Traps persist for longer
+  upgradeNum: 0
+  weaponDescription: Places arcane traps around the player that explode when an enemy
+    walks into it
   weaponArtwork: {fileID: 21300000, guid: b63136f2838a6b241aed052b88ae07e6, type: 3}

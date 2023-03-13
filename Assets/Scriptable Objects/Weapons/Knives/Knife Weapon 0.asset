@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3afb73ad2b49ee7468fe4bef99e07339, type: 3}
-  m_Name: SideCannon Weapon
+  m_Name: Knife Weapon 0
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8801865291643520016, guid: 90471dab36b47f743a5427f8f6de8a46, type: 3}
-  damage: 5
-  speed: 10
-  cooldownDuration: 2
+  prefab: {fileID: 8801865291643520016, guid: 82ab813b560e8bf4aa7facf353bf7c1d, type: 3}
+  damage: 35
+  speed: 12
+  cooldownDuration: 3
+  destroyAfterSeconds: 3.5
   pierce: 1
   projCount: 2
-  offsetRadius: 30
+  offsetRadius: 0.5
   projDelay: 0.1
-  weaponName: 
-  weaponDescription: 
-  isEnabled: 0
-  weaponArtwork: {fileID: 0}
+  weaponName: Magic Arrow
+  upgradeNum: 0
+  weaponDescription: Knife 0
+  weaponArtwork: {fileID: 21300000, guid: 817171407d873ab45a4721f07460efbe, type: 3}

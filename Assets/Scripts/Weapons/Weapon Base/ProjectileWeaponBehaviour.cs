@@ -8,12 +8,12 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     public GameObject explosion;
 
     protected Vector3 direction;
-    public float destroyAfterSeconds;
 
     // Current stats
     protected float currentDamage;
     protected float currentSpeed;
     protected float currentCooldownDuration;
+    protected float currentDestroyAfterSeconds;
     protected int currentPierce;
 
     void Awake()
@@ -22,11 +22,12 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         currentSpeed = weaponData.Speed;
         currentCooldownDuration = weaponData.CooldownDuration;
         currentPierce = weaponData.Pierce;
+        currentDestroyAfterSeconds = weaponData.DestroyAfterSeconds;
     }
 
     protected virtual void Start()
     {
-        Destroy(gameObject, destroyAfterSeconds);
+        Destroy(gameObject, currentDestroyAfterSeconds);
     }
 
     public void DirectionChecker(Vector3 dir)

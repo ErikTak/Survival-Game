@@ -24,6 +24,10 @@ public class WeaponScriptableObject : ScriptableObject
     public float CooldownDuration { get => cooldownDuration; private set => cooldownDuration = value; }
 
     [SerializeField]
+    float destroyAfterSeconds;
+    public float DestroyAfterSeconds { get => destroyAfterSeconds; private set => destroyAfterSeconds = value; }
+
+    [SerializeField]
     int pierce;
     public int Pierce { get => pierce; private set => pierce = value; }
 
@@ -50,9 +54,6 @@ public class WeaponScriptableObject : ScriptableObject
     [SerializeField]
     string weaponDescription;
     public string WeaponDescription { get => weaponDescription; private set => weaponDescription = value; }
-
-    [SerializeField]
-    bool isEnabled;
 
     [SerializeField]
     Sprite weaponArtwork;

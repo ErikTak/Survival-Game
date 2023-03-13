@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3afb73ad2b49ee7468fe4bef99e07339, type: 3}
-  m_Name: Book Weapon
+  m_Name: Garlic Weapon 0
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4075502494000315854, guid: 2abd8ff1ca301414b92b16189711c6b6, type: 3}
-  damage: 5
-  speed: 70
-  cooldownDuration: 4
-  pierce: 1
-  projCount: 4
-  offsetRadius: 5
+  prefab: {fileID: 662842971491074875, guid: dd0079f82d16b1747b25b81fa15e708a, type: 3}
+  damage: 50
+  speed: 0
+  cooldownDuration: 5
+  destroyAfterSeconds: 2.5
+  pierce: 0
+  projCount: 0
+  offsetRadius: 0
   projDelay: 0
-  weaponName: Book +0
+  weaponName: Damaging Aura
   upgradeNum: 0
-  weaponDescription: Book +0
-  isEnabled: 0
-  weaponArtwork: {fileID: 1493378937, guid: 8fbb8855647a090418df6b27d03185ec, type: 3}
+  weaponDescription: Garlic 0
+  weaponArtwork: {fileID: 21300000, guid: 5ec9616ac314cac40b81e1a5c7c176db, type: 3}

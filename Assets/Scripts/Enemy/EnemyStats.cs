@@ -12,7 +12,7 @@ public class EnemyStats : MonoBehaviour
     public EnemyScriptableObject enemyData;
     public HealthBar healthBar;
 
-    BoxCollider2D collider;
+    CapsuleCollider2D collider;
 
     // Current stats
     [HideInInspector]
@@ -32,7 +32,7 @@ public class EnemyStats : MonoBehaviour
 
     void Awake()
     {
-        collider = GetComponent<BoxCollider2D>();
+        collider = GetComponent<CapsuleCollider2D>();
         am = GetComponent<Animator>();
         currentValue = enemyData.ScoreValue;
         currentMoveSpeed = enemyData.MoveSpeed;

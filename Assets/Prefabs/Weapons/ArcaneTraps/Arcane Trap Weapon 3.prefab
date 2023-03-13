@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: a3ca2bc727a12d84aa2c401663170ded, type: 2}
   explosion: {fileID: 5099530623826267333, guid: 1d6cee4677c26cf44b238c41e7ca492e, type: 3}
-  destroyAfterSeconds: 10
+  destroyAfterSeconds: 11
 --- !u!70 &7100254107289737732
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

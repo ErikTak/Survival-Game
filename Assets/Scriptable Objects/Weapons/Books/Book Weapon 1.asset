@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Book Weapon 1
   m_EditorClassIdentifier: 
   prefab: {fileID: 4075502494000315854, guid: 206697192b190e548b1291bf323facc0, type: 3}
-  damage: 5
-  speed: 20
-  cooldownDuration: 4
+  damage: 70
+  speed: 60
+  cooldownDuration: 10
+  destroyAfterSeconds: 8.5
   pierce: 1
-  projCount: 6
+  projCount: 3
   offsetRadius: 5
   projDelay: 0
-  weaponName: Book +1
+  weaponName: Elemental Shield
   upgradeNum: 1
   weaponDescription: Book +1
-  isEnabled: 0
-  weaponArtwork: {fileID: 1493378937, guid: 8fbb8855647a090418df6b27d03185ec, type: 3}
+  weaponArtwork: {fileID: 21300000, guid: 772b2bfe21626ff459b17bf0718b21bc, type: 3}

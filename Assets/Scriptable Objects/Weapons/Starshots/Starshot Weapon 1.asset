@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Starshot Weapon 1
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: 82f7656ca97a6fa489528620c7a14047, type: 3}
-  damage: 5
+  damage: 50
   speed: 10
-  cooldownDuration: 2
+  cooldownDuration: 3.1
+  destroyAfterSeconds: 4
   pierce: 1
-  projCount: 1
-  offsetRadius: 0.5
-  projDelay: 0.1
-  weaponName: 
+  projCount: 4
+  offsetRadius: 0
+  projDelay: 0
+  weaponName: Energy Orb
   upgradeNum: 1
   weaponDescription: 
-  isEnabled: 0
-  weaponArtwork: {fileID: 0}
+  weaponArtwork: {fileID: -1347806594, guid: 44f6564ac3dfc8346b06ae1cbdbb8fd5, type: 3}

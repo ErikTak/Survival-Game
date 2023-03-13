@@ -99,7 +99,7 @@ public class EnemyMove : MonoBehaviour
 
     public void Knockback(float damage)
     {
-        knockbackDistance = damage * 0.1f;
+        knockbackDistance = damage * 0.01f;
         Vector2 knockbackDirection = transform.position - player.transform.position; // Calculate knockback direction
         knockbackDirection.Normalize();
         StartCoroutine(KnockbackCoroutine(knockbackDirection));

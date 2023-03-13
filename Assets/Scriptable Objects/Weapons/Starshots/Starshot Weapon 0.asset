@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3afb73ad2b49ee7468fe4bef99e07339, type: 3}
-  m_Name: Pistol Weapon
+  m_Name: Starshot Weapon 0
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8801865291643520016, guid: b0dac39a825241c4ab516872b1ee92ab, type: 3}
-  damage: 5
+  prefab: {fileID: 8801865291643520016, guid: a11e4ea5a6b3c1947a0a1d370818b9b4, type: 3}
+  damage: 50
   speed: 10
-  cooldownDuration: 2
+  cooldownDuration: 3.5
+  destroyAfterSeconds: 4
   pierce: 1
-  projCount: 5
-  offsetRadius: 0.5
-  projDelay: 0.1
-  weaponName: 
+  projCount: 4
+  offsetRadius: 0
+  projDelay: 0
+  weaponName: Energy Orb
+  upgradeNum: 0
   weaponDescription: 
-  isEnabled: 0
-  weaponArtwork: {fileID: 0}
+  weaponArtwork: {fileID: -1347806594, guid: 44f6564ac3dfc8346b06ae1cbdbb8fd5, type: 3}

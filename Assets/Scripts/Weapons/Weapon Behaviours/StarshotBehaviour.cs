@@ -9,6 +9,7 @@ public class StarshotBehaviour : ProjectileWeaponBehaviour
     protected override void Start()
     {
         base.Start();
+        Debug.Log("Projectile instantiated!");
     }
 
     void Update()

@@ -9,9 +9,17 @@ public class WeaponManager : MonoBehaviour
     public GameObject[] upgradeButtonObjects;
     public GameObject[] imageObjects;
 
+
+    // List and index for the controlled reward system
+    private List<int> numbers;
+    private int index;
+
     private void Start()
     {
         SetInventoryImage();
+
+        numbers = new List<int> { 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 4, 3, 2, 6, 7, 4, 1, 8, 5, 3, 2, 1 };
+        index = 0;
     }
 
     public void RewardTypeChooser()
@@ -21,7 +29,7 @@ public class WeaponManager : MonoBehaviour
         if (rewardOption == 0)
         {
             Debug.Log("rewardoption is 0");
-
+            ControlledReward(GetNextNumber());
         }
         if (rewardOption == 1)
         {
@@ -39,7 +47,14 @@ public class WeaponManager : MonoBehaviour
     /// <summary>
     /// CONTROLLED REWARD (GET A PREDETERMINED REWARD)
     /// </summary>
-    /// <param name="weaponControllerIndex"></param>
+    /// 
+    public int GetNextNumber()
+    {
+        int nextNumber = numbers[index];
+        index = (index + 1) % numbers.Count;
+        return nextNumber;
+    }
+
     public void ControlledReward(int weaponControllerIndex)
     {
         // Disable all upgrade buttons except the second one
@@ -49,10 +64,12 @@ public class WeaponManager : MonoBehaviour
         }
 
         // Activate the specified weapon controller
+        /*
         for (int i = 0; i < weaponControllers.Length; i++)
         {
             weaponControllers[i].SetActive(i == weaponControllerIndex);
         }
+        */
 
         // Set the card display for the second upgrade button
         CardDisplay cardDisplay = upgradeButtonObjects[1].GetComponent<CardDisplay>();
@@ -71,6 +88,8 @@ public class WeaponManager : MonoBehaviour
             cardDisplay.weapon = weapon;
             cardDisplay.weaponController = weaponControllers[weaponControllerIndex];
             cardDisplay.SetCardDetails();
+
+            Debug.Log("weaponControllerIndex: " + weaponControllerIndex);
         }
         else
         {

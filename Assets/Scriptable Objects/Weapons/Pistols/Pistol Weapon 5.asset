@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Pistol Weapon 5
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: 78bd52349af21114ca98ee0597c9cc74, type: 3}
-  damage: 5
-  speed: 2
-  cooldownDuration: 2
-  pierce: 1
-  projCount: 5
-  offsetRadius: 0.5
-  projDelay: 0.1
-  weaponName: 
+  damage: 50
+  speed: 12
+  cooldownDuration: 1.6
+  destroyAfterSeconds: 4
+  pierce: 3
+  projCount: 1
+  offsetRadius: 0
+  projDelay: 0
+  weaponName: Flame Orb
   upgradeNum: 5
   weaponDescription: 
-  isEnabled: 0
-  weaponArtwork: {fileID: 0}
+  weaponArtwork: {fileID: 21300000, guid: 0728bd2710ee8fd46b0512608e355384, type: 3}

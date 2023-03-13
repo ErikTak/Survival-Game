@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Arcane Trap Weapon 1
   m_EditorClassIdentifier: 
   prefab: {fileID: 8385972741447985216, guid: e601554df4e66b54199ea4beb5f6d033, type: 3}
-  damage: 5
-  speed: 15
-  cooldownDuration: 3
+  damage: 50
+  speed: 0
+  cooldownDuration: 4
+  destroyAfterSeconds: 10
   pierce: 1
-  projCount: 2
+  projCount: 3
   offsetRadius: 30
   projDelay: 0.1
-  weaponName: Spear +1
+  weaponName: Arcane Trap
   upgradeNum: 1
-  weaponDescription: Spear +1
-  isEnabled: 0
-  weaponArtwork: {fileID: -357260857, guid: 8fbb8855647a090418df6b27d03185ec, type: 3}
+  weaponDescription: Places one more arcane trap
+  weaponArtwork: {fileID: 21300000, guid: b63136f2838a6b241aed052b88ae07e6, type: 3}
