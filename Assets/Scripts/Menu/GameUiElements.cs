@@ -13,7 +13,10 @@ public class GameUiElements : MonoBehaviour
     TimeSpan gameDuration;
 
     private PlayerStats ps;
-    private EnemySpawner es;
+    // HERE
+    // HERE
+    // HERE
+    //private EnemySpawner es;
     private float startTime;
 
     public int score;
@@ -21,14 +24,20 @@ public class GameUiElements : MonoBehaviour
     private void Start()
     {
         ps = FindObjectOfType<PlayerStats>();
-        es = FindObjectOfType<EnemySpawner>();
+        // HERE
+        // HERE
+        // HERE
+        //es = FindObjectOfType<EnemySpawner>();
         startTime = Time.time;
     }
 
     void Update()
     {
         levelDisplay.text = "level: " + ps.level.ToString();
-        waveDisplay.text = es.waves[es.currentWaveCount].waveName;
+        // HERE
+        // HERE
+        // HERE
+        //waveDisplay.text = es.waves[es.currentWaveCount].waveName;
 
         // Calculate the duration of the game
         float timeElapsed = Time.time - startTime;
@@ -46,11 +55,14 @@ public class GameUiElements : MonoBehaviour
     {
         float currentScore = score;
         float newScore;
-        int currentWaveCount = es.currentWaveCount;
-        float multiplier = 1.0f + (currentWaveCount / 10.0f);
-        newScore = enemyValue * multiplier;
+        // HERE
+        // HERE
+        // HERE
+        //int currentWaveCount = es.currentWaveCount;
+        //float multiplier = 1.0f + (currentWaveCount / 10.0f);
+        //newScore = enemyValue * multiplier;
 
         // Round the sum of the current score and the new score
-        score = ((int)Math.Round(currentScore + newScore));
+        //score = ((int)Math.Round(currentScore + newScore));
     }
 }

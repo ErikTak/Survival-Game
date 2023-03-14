@@ -53,7 +53,10 @@ public class EnemyStats : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, player.position) >= despawnDistance)
         {
-            ReturnEnemy();
+            // HERE
+            // HERE
+            // HERE
+            // ReturnEnemy();
         }
     }
 
@@ -99,6 +102,11 @@ public class EnemyStats : MonoBehaviour
         }
     }
 
+    // HERE
+    // HERE
+    // HERE
+
+    /*
     private void OnDestroy()
     {
         EnemySpawner es = FindObjectOfType<EnemySpawner>();
@@ -111,5 +119,6 @@ public class EnemyStats : MonoBehaviour
         EnemySpawner es = FindObjectOfType<EnemySpawner>();
         transform.position = player.position + es.relativeSpawnPoints[Random.Range(0, es.relativeSpawnPoints.Count)].position;
     }
+    */
 
 }
