@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
-
+    
+    /*
     public Dropdown resolutionDropdown;
 
     Resolution[] resolutions;
@@ -43,7 +44,7 @@ public class MainMenu : MonoBehaviour
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
-
+    */
 
     // Scene Management
 

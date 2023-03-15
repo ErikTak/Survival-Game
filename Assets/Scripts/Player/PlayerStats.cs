@@ -80,7 +80,6 @@ public class PlayerStats : MonoBehaviour
         expBar.SetMaxExp(experienceCap);
         expBar.SetExp(1);
         isDead = false;
-        Debug.Log("playerstats Start is called");
     }
 
     void Update()

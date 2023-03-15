@@ -5,7 +5,6 @@ using System;
 public class GameUiElements : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI levelDisplay;
-    public TMPro.TextMeshProUGUI waveDisplay;
     public TMPro.TextMeshProUGUI timeDisplay;
     public TMPro.TextMeshProUGUI scoreDisplay;
 
@@ -13,10 +12,7 @@ public class GameUiElements : MonoBehaviour
     TimeSpan gameDuration;
 
     private PlayerStats ps;
-    // HERE
-    // HERE
-    // HERE
-    //private EnemySpawner es;
+    private EnemySpawner es;
     private float startTime;
 
     public int score;
@@ -24,20 +20,14 @@ public class GameUiElements : MonoBehaviour
     private void Start()
     {
         ps = FindObjectOfType<PlayerStats>();
-        // HERE
-        // HERE
-        // HERE
-        //es = FindObjectOfType<EnemySpawner>();
+
+        es = FindObjectOfType<EnemySpawner>();
         startTime = Time.time;
     }
 
     void Update()
     {
         levelDisplay.text = "level: " + ps.level.ToString();
-        // HERE
-        // HERE
-        // HERE
-        //waveDisplay.text = es.waves[es.currentWaveCount].waveName;
 
         // Calculate the duration of the game
         float timeElapsed = Time.time - startTime;
@@ -55,14 +45,11 @@ public class GameUiElements : MonoBehaviour
     {
         float currentScore = score;
         float newScore;
-        // HERE
-        // HERE
-        // HERE
-        //int currentWaveCount = es.currentWaveCount;
-        //float multiplier = 1.0f + (currentWaveCount / 10.0f);
-        //newScore = enemyValue * multiplier;
+        int currentWaveCount = es.nextWave;
+        float multiplier = 1.0f + (currentWaveCount / 10.0f);
+        newScore = enemyValue * multiplier;
 
         // Round the sum of the current score and the new score
-        //score = ((int)Math.Round(currentScore + newScore));
+        score = ((int)Math.Round(currentScore + newScore));
     }
 }

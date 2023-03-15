@@ -8,7 +8,8 @@ public class PauseMenu : MonoBehaviour
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject endGameMenuUI;
-    public GameObject levelUpMenuUI;
+    public GameObject singleLevelUpMenuUI;
+    public GameObject multipleLevelUpMenuUI;
     public GameObject inGameUI;
     bool gameHasEnded = false;
     public GameObject[] enemiesToDestroy;
@@ -116,12 +117,29 @@ public class PauseMenu : MonoBehaviour
     public void ShowLvlUpMenu()
     {
         Time.timeScale = 0;
-        levelUpMenuUI.SetActive(true);
+        int rewardOption = PlayerPrefs.GetInt("RewardOption");
+
+        if (rewardOption == 0)
+        {
+            Debug.Log("rewardoption is 0");
+            singleLevelUpMenuUI.SetActive(true);
+        }
+        if (rewardOption == 1)
+        {
+            Debug.Log("rewardoption is 1");
+            singleLevelUpMenuUI.SetActive(true);
+        }
+        if (rewardOption == 2)
+        {
+            Debug.Log("rewardoption is 2");
+            multipleLevelUpMenuUI.SetActive(true);
+        }
     }
 
     public void HideLvlUpMenu()
     {
         Time.timeScale = 1;
-        levelUpMenuUI.SetActive(false);
+        singleLevelUpMenuUI.SetActive(false);
+        multipleLevelUpMenuUI.SetActive(false);
     }
 }
