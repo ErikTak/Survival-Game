@@ -163,10 +163,13 @@ MonoBehaviour:
   drops:
   - name: Blue Gem
     itemPrefab: {fileID: 7831860376292965640, guid: 2f31af4c5a375d440b248b7237dbc28e, type: 3}
-    dropRate: 98
+    dropRate: 0
   - name: Health Pickup
     itemPrefab: {fileID: 3922411103447907656, guid: b93c705806223b74bbc1f3a7cfd68645, type: 3}
-    dropRate: 2
+    dropRate: 0
+  - name: SpeedBoost Pickup
+    itemPrefab: {fileID: 3922411103447907656, guid: d415f701018296f4baa2c3c998f87bbc, type: 3}
+    dropRate: 100
 --- !u!114 &8006294803555600632
 MonoBehaviour:
   m_ObjectHideFlags: 0

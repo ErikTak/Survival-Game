@@ -35,14 +35,14 @@ public class DropRateManager : MonoBehaviour
                 {
                     possibleDrops.Add(rate);
                 }
+            }
 
-                if (possibleDrops.Count > 0)
-                {
-                    Drops drops = possibleDrops[UnityEngine.Random.Range(0, possibleDrops.Count)];
-                    Instantiate(drops.itemPrefab, transform.position, Quaternion.identity);
-                }
-
+            if (possibleDrops.Count > 0)
+            {
+                Drops drop = possibleDrops[UnityEngine.Random.Range(0, possibleDrops.Count)];
+                Instantiate(drop.itemPrefab, transform.position, Quaternion.identity);
             }
         }
     }
+
 }

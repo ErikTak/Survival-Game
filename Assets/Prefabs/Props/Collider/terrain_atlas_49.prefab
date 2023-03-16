@@ -95,9 +95,11 @@ GameObject:
   - component: {fileID: 3940814810070946945}
   - component: {fileID: 850637185941722489}
   - component: {fileID: 103514755131015574}
+  - component: {fileID: 1704398189036594263}
+  - component: {fileID: -7680230675023891760}
   m_Layer: 0
   m_Name: terrain_atlas_49
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,3 +201,41 @@ PolygonCollider2D:
       - {x: -0.32194275, y: -0.29442286}
       - {x: -0.3213572, y: -0.57909185}
       - {x: 0.32491034, y: -0.5800344}
+--- !u!114 &1704398189036594263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143772858992866511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6e5cde38980da4fbee13af79315940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+--- !u!114 &-7680230675023891760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143772858992866511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a04374a100ca994cab54ab862286453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Small Potion
+    itemPrefab: {fileID: 3922411103447907656, guid: b93c705806223b74bbc1f3a7cfd68645, type: 3}
+    dropRate: 50
+  - name: Big Potion
+    itemPrefab: {fileID: 3922411103447907656, guid: 4728d601c4789b541a10a75b37e7aaeb, type: 3}
+    dropRate: 10
+  - name: Speed Boost
+    itemPrefab: {fileID: 3922411103447907656, guid: d415f701018296f4baa2c3c998f87bbc, type: 3}
+    dropRate: 1
+  - name: Magnet
+    itemPrefab: {fileID: 3922411103447907656, guid: 1fdf6adaf6c40d04c8dbac1428c53f29, type: 3}
+    dropRate: 0.5

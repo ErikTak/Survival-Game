@@ -36,6 +36,8 @@ public class PlayerStats : MonoBehaviour
     [HideInInspector]
     public float currentMagnet;
 
+    public float originalMoveSpeed;
+
     // Experience and level of the player
     [Header("Experience/Level")]
     public int experience = 0;
@@ -70,6 +72,7 @@ public class PlayerStats : MonoBehaviour
         currentMight = characterData.Might;
         currentProjectileSpeed = characterData.ProjectileSpeed;
         currentMagnet = characterData.Magnet;
+        originalMoveSpeed = currentMoveSpeed;
     }
 
     void Start()
@@ -202,5 +205,32 @@ public class PlayerStats : MonoBehaviour
                 currentHealth = characterData.MaxHealth;
             }
         }
+    }
+
+    // These two functions increases the currentMagnet radius and then returns to the original value after a given amount of time
+    public void IncreaseMagnet()
+    {
+        float originalMagnet = currentMagnet;
+        currentMagnet *= 10f;
+        StartCoroutine(ResetMagnet(originalMagnet, 3f));
+    }
+
+    private IEnumerator ResetMagnet(float originalMagnet, float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        currentMagnet = originalMagnet;
+    }
+
+    // These two functions increases the currentMoveSpeed value and then returns to the original value after a given amount of time
+    public void IncreaseMoveSpeed()
+    {
+        currentMoveSpeed = 10f;
+        StartCoroutine(ResetMoveSpeed(originalMoveSpeed, 5f));
+    }
+
+    private IEnumerator ResetMoveSpeed(float originalMoveSpeed, float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        currentMoveSpeed = originalMoveSpeed;
     }
 }

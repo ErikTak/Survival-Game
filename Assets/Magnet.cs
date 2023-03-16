@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPotion : Pickup, ICollectible
+public class Magnet : Pickup, ICollectible
 {
-    public int heathToRestore;
-
     public float rotationSpeed = 2.0f; // Determines how fast the potion rotates.
     public float rotationAngle = 30.0f; // Determines the maximum angle the potion can rotate.
 
@@ -20,7 +18,7 @@ public class HealthPotion : Pickup, ICollectible
     private void OnDestroy()
     {
         PlayerStats player = FindObjectOfType<PlayerStats>();
-        player.RestoreHealth(heathToRestore);
+        player.IncreaseMagnet();
     }
 
     private void Start()
@@ -40,5 +38,4 @@ public class HealthPotion : Pickup, ICollectible
         }
     }
 }
-
 

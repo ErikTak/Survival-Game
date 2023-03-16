@@ -27,22 +27,21 @@ public class WeaponManager : MonoBehaviour
     {
         int rewardOption = PlayerPrefs.GetInt("RewardOption");
 
-        if (rewardOption == 0)
+        switch (rewardOption)
         {
-            Debug.Log("rewardoption is 0");
-            ControlledReward(GetNextNumber());
+            case 0:
+                ControlledReward(GetNextNumber());
+                break;
+            case 1:
+                RandomizeOneReward();
+                break;
+            case 2:
+                RandomizeRewards();
+                break;
+            default:
+                Debug.LogError("Invalid reward option selected: " + rewardOption);
+                break;
         }
-        if (rewardOption == 1)
-        {
-            Debug.Log("rewardoption is 1");
-            RandomizeOneReward();
-        }
-        if (rewardOption == 2)
-        {
-            Debug.Log("rewardoption is 2");
-            RandomizeRewards();
-        }
-
     }
 
     /// <summary>
@@ -68,7 +67,16 @@ public class WeaponManager : MonoBehaviour
         CardDisplay cardDisplay = singleUpgradeButtonObject.GetComponent<CardDisplay>();
         if (cardDisplay != null)
         {
-            WeaponScriptableObject weapon = weaponControllers[weaponControllerIndex].GetComponent<WeaponController>().weapons[weaponControllers[weaponControllerIndex].GetComponent<WeaponController>().currentWeaponIndex];
+            WeaponScriptableObject weapon;
+
+            if (!weaponControllers[weaponControllerIndex].activeSelf)
+            {
+                weapon = weaponControllers[weaponControllerIndex].GetComponent<WeaponController>().weapons[weaponControllers[weaponControllerIndex].GetComponent<WeaponController>().currentWeaponIndex];
+            }
+            else
+            {
+                weapon = weaponControllers[weaponControllerIndex].GetComponent<WeaponController>().weapons[weaponControllers[weaponControllerIndex].GetComponent<WeaponController>().currentWeaponIndex + 1];
+            }
             cardDisplay.weapon = weapon;
             cardDisplay.weaponController = weaponControllers[weaponControllerIndex];
             cardDisplay.SetCardDetails();
@@ -90,20 +98,30 @@ public class WeaponManager : MonoBehaviour
     {
         HideFixedButtons();
 
-        int randomIndex = Random.Range(0, weaponControllers.Length);
+        int randomIndex;
+        WeaponScriptableObject weapon;
         CardDisplay cardDisplay = singleUpgradeButtonObject.GetComponent<CardDisplay>();
-        if (cardDisplay != null)
+
+        do
         {
-            WeaponScriptableObject weapon = weaponControllers[randomIndex].GetComponent<WeaponController>().weapons[0];
-            cardDisplay.weapon = weapon;
-            cardDisplay.weaponController = weaponControllers[randomIndex];
-            cardDisplay.SetCardDetails();
-        }
-        else
-        {
-            Debug.LogError("CardDisplay component not found on singleUpgradeButtonObject");
-        }
+            randomIndex = Random.Range(0, weaponControllers.Length);
+
+            if (!weaponControllers[randomIndex].activeSelf)
+            {
+                weapon = weaponControllers[randomIndex].GetComponent<WeaponController>().weapons[weaponControllers[randomIndex].GetComponent<WeaponController>().currentWeaponIndex];
+            }
+            else
+            {
+                weapon = weaponControllers[randomIndex].GetComponent<WeaponController>().weapons[weaponControllers[randomIndex].GetComponent<WeaponController>().currentWeaponIndex + 1];
+            }
+
+        } while (weaponControllers[randomIndex].GetComponent<WeaponController>().currentWeaponIndex == 10);
+
+        cardDisplay.weapon = weapon;
+        cardDisplay.weaponController = weaponControllers[randomIndex];
+        cardDisplay.SetCardDetails();
     }
+
 
 
 
@@ -115,39 +133,56 @@ public class WeaponManager : MonoBehaviour
         HideSingleButton();
 
         int[] usedCards = new int[weaponControllers.Length];
+        int controllerIndex = 0;
         for (int i = 0; i < fixedUpgradeButtonObjects.Length; i++)
         {
             // Assign weapon controller to fixedUpgradeButtonObject[i]
-            int randomIndex = Random.Range(0, weaponControllers.Length);
-            while (usedCards[randomIndex] == 1)
+            if (controllerIndex >= weaponControllers.Length)
             {
-                randomIndex = Random.Range(0, weaponControllers.Length);
+                controllerIndex = 0;
             }
-            usedCards[randomIndex] = 1;
+            while (usedCards[controllerIndex] == 1)
+            {
+                controllerIndex++;
+                if (controllerIndex >= weaponControllers.Length)
+                {
+                    controllerIndex = 0;
+                }
+            }
+            usedCards[controllerIndex] = 1;
 
             CardDisplay cardDisplay = fixedUpgradeButtonObjects[i].GetComponent<CardDisplay>();
             if (cardDisplay != null)
             {
                 WeaponScriptableObject weapon;
+                WeaponController weaponController = weaponControllers[controllerIndex].GetComponent<WeaponController>();
 
-                if (!weaponControllers[randomIndex].activeSelf)
+                if (weaponController.currentWeaponIndex == 10)
                 {
-                    weapon = weaponControllers[randomIndex].GetComponent<WeaponController>().weapons[weaponControllers[randomIndex].GetComponent<WeaponController>().currentWeaponIndex];
+                    cardDisplay.gameObject.SetActive(false);
+                    continue;
+                }
+
+                if (!weaponControllers[controllerIndex].activeSelf)
+                {
+                    weapon = weaponController.weapons[weaponController.currentWeaponIndex];
                 }
                 else
                 {
-                    weapon = weaponControllers[randomIndex].GetComponent<WeaponController>().weapons[weaponControllers[randomIndex].GetComponent<WeaponController>().currentWeaponIndex + 1];
+                    weapon = weaponController.weapons[weaponController.currentWeaponIndex + 1];
                 }
                 cardDisplay.weapon = weapon;
-                cardDisplay.weaponController = weaponControllers[randomIndex];
+                cardDisplay.weaponController = weaponControllers[controllerIndex];
                 cardDisplay.SetCardDetails();
             }
             else
             {
                 Debug.LogError("CardDisplay component not found on fixedUpgradeButtonObject[" + i + "]");
             }
+            controllerIndex++;
         }
     }
+
 
 
     public void SetInventoryImage()

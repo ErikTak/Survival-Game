@@ -28,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7831860376292965640}
-  m_LocalRotation: {x: -0, y: -0, z: 0.1432937, w: -0.9896802}
-  m_LocalPosition: {x: 1.82, y: -0.009999372, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16.477}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7831860376292965641
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -101,9 +101,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000059604645, y: 0.34580946}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.59335
+  m_Radius: 0.5
 --- !u!114 &5197003671920835877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c0f4f62b8c02542b1cb14724c2d8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  experienceGranted: 100
+  experienceGranted: 8
 --- !u!50 &-2711922024370576666
 Rigidbody2D:
   serializedVersion: 4

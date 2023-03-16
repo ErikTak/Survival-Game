@@ -29,6 +29,9 @@ public class EnemySpawner : MonoBehaviour
     public float timeBetweenWaves = 5f;
     private float waveCountdown;
 
+    public float waveTimer;
+    public float maximumWaveTime;
+
     private float searchCountdown = 1f;
 
     private SpawnState state = SpawnState.Counting;
@@ -47,19 +50,21 @@ public class EnemySpawner : MonoBehaviour
         }
 
         waveCountdown = timeBetweenWaves;
+        waveTimer = maximumWaveTime;
     }
 
     void Update()
     {
         if (state == SpawnState.Waiting)
         {
-            if (!EnemyIsAlive())
+            if (!EnemyIsAlive() || waveTimer <= 0)
             {
                 // Begin new round
                 WaveCompleted();
             }
             else
             {
+                waveTimer -= Time.deltaTime;
                 return;
             }
         }
@@ -84,6 +89,7 @@ public class EnemySpawner : MonoBehaviour
 
         state = SpawnState.Counting;
         waveCountdown = timeBetweenWaves;
+        waveTimer = maximumWaveTime;
 
         if (nextWave + 1 > waves.Length - 1)
         {

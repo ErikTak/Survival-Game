@@ -65,6 +65,7 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
             {
                 breakable.TakeDamage(currentDamage);
                 ReducePierce();
+                Instantiate(explosion, transform.position, Quaternion.identity);
             }
         }
     }

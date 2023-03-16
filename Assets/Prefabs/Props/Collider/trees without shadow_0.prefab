@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3964929146322909547}
   m_Layer: 0
   m_Name: trees without shadow_0
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
