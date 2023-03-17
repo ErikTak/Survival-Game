@@ -161,8 +161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drops:
-  - name: Magnet
-    itemPrefab: {fileID: 3922411103447907656, guid: 1fdf6adaf6c40d04c8dbac1428c53f29, type: 3}
+  - name: Blue Gem
+    itemPrefab: {fileID: 7831860376292965640, guid: 2f31af4c5a375d440b248b7237dbc28e, type: 3}
     dropRate: 100
 --- !u!114 &8006294803555600632
 MonoBehaviour:

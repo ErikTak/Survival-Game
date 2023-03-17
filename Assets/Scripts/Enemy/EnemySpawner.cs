@@ -69,6 +69,11 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
+        if (state == SpawnState.Spawning)
+        {
+            waveTimer -= Time.deltaTime;
+        }
+
         if (waveCountdown <= 0)
         {
             if (state != SpawnState.Spawning)

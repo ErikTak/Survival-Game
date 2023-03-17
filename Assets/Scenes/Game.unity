@@ -5082,7 +5082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -72.119995, y: -26.797974}
+  m_AnchoredPosition: {x: -72.12012, y: -26.797974}
   m_SizeDelta: {x: 144.23926, y: 53.596893}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &203649041
@@ -42245,39 +42245,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - waveName: Wave 1
+  - waveName: Just Normal Bats
     enemyGroups:
     - enemyName: Bat 1
       enemyCount: 0
-      enemySpawnCount: 5
+      enemySpawnCount: 10
+      enemyPrefab: {fileID: 1873232008215357874, guid: 02bd175aa9f439b44852b863f3a87ff6, type: 3}
+    spawnDelay: 0.1
+  - waveName: Mixed Bats
+    enemyGroups:
+    - enemyName: Bat 1
+      enemyCount: 0
+      enemySpawnCount: 100
       enemyPrefab: {fileID: 1873232008215357874, guid: 02bd175aa9f439b44852b863f3a87ff6, type: 3}
     - enemyName: Bat 2
       enemyCount: 0
-      enemySpawnCount: 1
+      enemySpawnCount: 200
       enemyPrefab: {fileID: 1873232008215357874, guid: 52e6cee9a0616184b966211974dade66, type: 3}
-    - enemyName: Assassin
-      enemyCount: 0
-      enemySpawnCount: 5
-      enemyPrefab: {fileID: 1873232008215357874, guid: ea7f890a401f89d4388b4bfb1da053a4, type: 3}
-    spawnDelay: 0
-  - waveName: Wave 2
+    spawnDelay: 0.1
+  - waveName: Bats and Imps
     enemyGroups:
-    - enemyName: Skelly
+    - enemyName: Bat 1
       enemyCount: 0
-      enemySpawnCount: 1
-      enemyPrefab: {fileID: 1873232008215357874, guid: 93bec58319242664290d037eb964e00e, type: 3}
-    - enemyName: Mini
-      enemyCount: 0
-      enemySpawnCount: 1
-      enemyPrefab: {fileID: 1873232008215357874, guid: d3211d967b0417445825b81a3f6ba0bd, type: 3}
-    spawnDelay: 0
-  - waveName: Wave 3
-    enemyGroups:
-    - enemyName: Orc
-      enemyCount: 0
-      enemySpawnCount: 1
+      enemySpawnCount: 100
       enemyPrefab: {fileID: 1873232008215357874, guid: 86d53762edfa9b049b2a5c814a3d8254, type: 3}
-    spawnDelay: 0
+    - enemyName: Bat 2
+      enemyCount: 0
+      enemySpawnCount: 100
+      enemyPrefab: {fileID: 1873232008215357874, guid: 86d53762edfa9b049b2a5c814a3d8254, type: 3}
+    - enemyName: Imp
+      enemyCount: 0
+      enemySpawnCount: 100
+      enemyPrefab: {fileID: 1873232008215357874, guid: 86d53762edfa9b049b2a5c814a3d8254, type: 3}
+    spawnDelay: 0.1
+  - waveName: Imps and Armored Imps
+    enemyGroups:
+    - enemyName: Imp
+      enemyCount: 0
+      enemySpawnCount: 200
+      enemyPrefab: {fileID: 1873232008215357874, guid: 28669c4d25c3cca4397ebeba54502bb1, type: 3}
+    - enemyName: Armored Imp
+      enemyCount: 0
+      enemySpawnCount: 100
+      enemyPrefab: {fileID: 1873232008215357874, guid: cbfe4169947d243418c5059ee69633bd, type: 3}
+    spawnDelay: 0.1
+  - waveName: Imps and Goblins
+    enemyGroups:
+    - enemyName: Imp
+      enemyCount: 0
+      enemySpawnCount: 100
+      enemyPrefab: {fileID: 1873232008215357874, guid: 28669c4d25c3cca4397ebeba54502bb1, type: 3}
+    - enemyName: Armored Imp
+      enemyCount: 0
+      enemySpawnCount: 100
+      enemyPrefab: {fileID: 1873232008215357874, guid: cbfe4169947d243418c5059ee69633bd, type: 3}
+    - enemyName: Goblin
+      enemyCount: 0
+      enemySpawnCount: 100
+      enemyPrefab: {fileID: 1873232008215357874, guid: 2b7e198a167c7854ca1b2e83ed29cfe2, type: 3}
+    spawnDelay: 0.1
+  - waveName: Imps and Goblins
+    enemyGroups:
+    - enemyName: Big Grey Minotaur
+      enemyCount: 0
+      enemySpawnCount: 10
+      enemyPrefab: {fileID: 1873232008215357874, guid: e28820eb9f36c2d4baabde92010a4705, type: 3}
+    - enemyName: Armored Imp
+      enemyCount: 0
+      enemySpawnCount: 100
+      enemyPrefab: {fileID: 1873232008215357874, guid: cbfe4169947d243418c5059ee69633bd, type: 3}
+    - enemyName: Goblin
+      enemyCount: 0
+      enemySpawnCount: 100
+      enemyPrefab: {fileID: 1873232008215357874, guid: 2b7e198a167c7854ca1b2e83ed29cfe2, type: 3}
+    spawnDelay: 0.1
   nextWave: 0
   timeBetweenWaves: 5
   waveTimer: 0
@@ -48327,7 +48368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.3736572, y: 0}
+  m_AnchoredPosition: {x: -1.3735352, y: 0}
   m_SizeDelta: {x: -8.9563, y: -12.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &3315273333618223624
