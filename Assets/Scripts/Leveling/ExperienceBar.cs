@@ -24,7 +24,7 @@ public class ExperienceBar : MonoBehaviour
 
     public void SetExp(float experience)
     {
-        if (experience != 0)
+        if (fill != null)
         {
             slider.value = experience;
             fill.color = gradient.Evaluate(slider.normalizedValue);

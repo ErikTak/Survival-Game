@@ -117,6 +117,21 @@ public class PauseMenu : MonoBehaviour
     public void ShowLvlUpMenu()
     {
         Time.timeScale = 0;
+
+        StartCoroutine(ExecuteAfterOneSecond());
+    }
+
+    private IEnumerator ExecuteAfterOneSecond()
+    {
+        float timeElapsed = 0f;
+        float waitTime = 1f;
+
+        while (timeElapsed < waitTime)
+        {
+            timeElapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
         int rewardOption = PlayerPrefs.GetInt("RewardOption");
 
         if (rewardOption == 0)
@@ -135,6 +150,7 @@ public class PauseMenu : MonoBehaviour
             multipleLevelUpMenuUI.SetActive(true);
         }
     }
+
 
     public void HideLvlUpMenu()
     {

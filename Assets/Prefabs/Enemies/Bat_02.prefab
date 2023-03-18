@@ -140,7 +140,7 @@ MonoBehaviour:
   flashEffect: {fileID: 8006294803555600632}
   flashColors: {r: 0, g: 0, b: 0, a: 1}
   scoreUI: {fileID: 0}
-  enemyData: {fileID: 11400000, guid: 473b4f5f54d78094c99a73033dd1b458, type: 2}
+  enemyData: {fileID: 11400000, guid: f3da87445409b83448f668a613e2731b, type: 2}
   healthBar: {fileID: 1647062968794734708}
   currentMoveSpeed: 0
   currentHealth: 0

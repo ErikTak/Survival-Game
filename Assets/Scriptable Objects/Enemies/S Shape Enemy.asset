@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: S Shape Enemy
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  maxHealth: 20
-  damage: 0
+  maxHealth: 40
+  damage: 5
   scoreValue: 3

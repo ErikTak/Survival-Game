@@ -8,6 +8,9 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] private Color flashColors;
 
     Animator am;
+    DropRateManager drm;
+
+    [HideInInspector]
     public GameUiElements scoreUI;
     public EnemyScriptableObject enemyData;
     public HealthBar healthBar;
@@ -34,6 +37,7 @@ public class EnemyStats : MonoBehaviour
     {
         collider = GetComponent<CapsuleCollider2D>();
         am = GetComponent<Animator>();
+        drm = GetComponent<DropRateManager>();
         currentValue = enemyData.ScoreValue;
         currentMoveSpeed = enemyData.MoveSpeed;
         currentHealth = enemyData.MaxHealth;
@@ -73,6 +77,7 @@ public class EnemyStats : MonoBehaviour
     {
         isDead = true;
         collider.enabled = false;
+        drm.SpawnTheDrop();
         StartCoroutine(DestroyAfterDelay(am.GetCurrentAnimatorStateInfo(0).length));
     }
 

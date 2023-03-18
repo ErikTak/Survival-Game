@@ -5,6 +5,12 @@ using UnityEngine;
 public class BreakableProps : MonoBehaviour
 {
     public float health;
+    DropRateManager drm;
+
+    public void Start()
+    {
+        drm = GetComponent<DropRateManager>();
+    }
 
     public void TakeDamage(float dmg)
     {
@@ -18,6 +24,7 @@ public class BreakableProps : MonoBehaviour
 
     public void Kill()
     {
+        drm.SpawnTheDrop();
         Destroy(gameObject);
     }
 }

@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
 
     //delete this if not working
     public WeaponManager wpmng;
+    public GameObject levelUpFX;
 
     public bool isDead = false;
 
@@ -126,6 +127,9 @@ public class PlayerStats : MonoBehaviour
                 }
             }
             experienceCap += experienceCapIncrease;
+
+            // Instantiate the levelupFX on the player and open the levelup menu
+            Instantiate(levelUpFX, transform.position, Quaternion.identity);
             pauseMenu.ShowLvlUpMenu();
 
             // Randomize rewards when leveling up

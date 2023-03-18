@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60ab2208a8662864a81bba21513230b3, type: 3}
-  m_Name: PurpleOrc
+  m_Name: Bat 1
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 3
   maxHealth: 40
   damage: 5
   scoreValue: 1
