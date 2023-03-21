@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1033849359
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 26
   m_Sprite: {fileID: 21300000, guid: 772b2bfe21626ff459b17bf0718b21bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,7 +101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 86231e56b459e6546b5730d456ccf9cf, type: 2}
   explosion: {fileID: 5099530623826267333, guid: 1d6cee4677c26cf44b238c41e7ca492e, type: 3}
-  destroyAfterSeconds: 3
 --- !u!58 &-4373351496820416100
 CircleCollider2D:
   m_ObjectHideFlags: 0

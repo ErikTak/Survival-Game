@@ -24,4 +24,4 @@ MonoBehaviour:
   weaponName: Flame Orb
   upgradeNum: 0
   weaponDescription: 
-  weaponArtwork: {fileID: 21300000, guid: 0728bd2710ee8fd46b0512608e355384, type: 3}
+  weaponArtwork: {fileID: -1190660444, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

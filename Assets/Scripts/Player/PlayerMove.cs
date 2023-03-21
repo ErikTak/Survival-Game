@@ -65,6 +65,9 @@ public class PlayerMove : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = new Vector2(moveDir.x * player.currentMoveSpeed, moveDir.y * player.currentMoveSpeed);
+        if (!player.isDead)
+        {
+            rb.velocity = new Vector2(moveDir.x * player.currentMoveSpeed, moveDir.y * player.currentMoveSpeed);
+        }
     }
 }

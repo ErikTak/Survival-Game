@@ -24,4 +24,4 @@ MonoBehaviour:
   weaponName: Arcane Trap
   upgradeNum: 1
   weaponDescription: Places one more arcane trap
-  weaponArtwork: {fileID: 21300000, guid: b63136f2838a6b241aed052b88ae07e6, type: 3}
+  weaponArtwork: {fileID: 137307877, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

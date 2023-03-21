@@ -10,12 +10,20 @@ public class LevelUpBehaviour : MonoBehaviour
     {
         am = GetComponent<Animator>();
         float animationDelay = am.GetCurrentAnimatorStateInfo(0).length;
-        StartCoroutine(DelayDestroy(animationDelay));
+        StartCoroutine(DelayDestroy());
     }
-    private IEnumerator DelayDestroy(float delay)
+    private IEnumerator DelayDestroy()
     {
-        // Wait for 2 seconds before ending the game
-        yield return new WaitForSeconds(delay);
+        float timeElapsed = 0f;
+        float waitTime = 1f;
+
+        while (timeElapsed < waitTime)
+        {
+            timeElapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        //yield return new WaitForSeconds(0.9f);
 
         Destroy(gameObject);
     }

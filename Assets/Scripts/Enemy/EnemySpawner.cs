@@ -11,7 +11,6 @@ public class EnemySpawner : MonoBehaviour
     {
         public string waveName;
         public List<EnemyGroup> enemyGroups; // List of all enemies
-        public float spawnDelay;
     }
 
     [System.Serializable]
@@ -19,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     {
         public string enemyName;
         public int enemyCount; // The number of enemies spawned this wave
-        public int enemySpawnCount; // The number of enemies ALREADY spawned this wave
+        public int enemySpawnCount; // The number of enemies to spawn this wave
         public GameObject enemyPrefab;
     }
 
@@ -145,7 +144,8 @@ public class EnemySpawner : MonoBehaviour
 
                 SpawnEnemy(enemyGroup.enemyPrefab);
                 enemyGroup.enemyCount++;
-                yield return new WaitForSeconds(_wave.spawnDelay);
+
+                yield return new WaitForSeconds(maximumWaveTime / GetTotalEnemyCount(_wave));
 
             }
         }
@@ -154,6 +154,17 @@ public class EnemySpawner : MonoBehaviour
 
         yield break;
     }
+
+    int GetTotalEnemyCount(Wave wave)
+    {
+        int count = 0;
+        foreach (var enemyGroup in wave.enemyGroups)
+        {
+            count += enemyGroup.enemySpawnCount;
+        }
+        return count;
+    }
+
 
     void SpawnEnemy(GameObject _enemy)
     {

@@ -24,4 +24,4 @@ MonoBehaviour:
   weaponName: Firebolt Wand
   upgradeNum: 2
   weaponDescription: 
-  weaponArtwork: {fileID: 21300000, guid: ad58b108aca0c1545820d99019bd7e5d, type: 3}
+  weaponArtwork: {fileID: 396185469, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

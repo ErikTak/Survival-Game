@@ -17,38 +17,6 @@ public class DropRateManager : MonoBehaviour
 
     public List<Drops> drops;
 
-
-    /*
-    public void OnApplicationQuit()
-    {
-        isQuitting = true;
-    }
-
-    private void OnDestroy()
-    {
-        if (!isQuitting)
-        {
-            float randomNumber = UnityEngine.Random.Range(0f, 100f);
-            List<Drops> possibleDrops = new List<Drops>();
-
-            foreach (Drops rate in drops)
-            {
-                if (randomNumber <= rate.dropRate)
-                {
-                    possibleDrops.Add(rate);
-                }
-            }
-
-            if (possibleDrops.Count > 0)
-            {
-                Drops drop = possibleDrops[UnityEngine.Random.Range(0, possibleDrops.Count)];
-                Instantiate(drop.itemPrefab, transform.position, Quaternion.identity);
-            }
-        }
-    }
-
-    */
-
     public void SpawnTheDrop()
     {
         float randomNumber = UnityEngine.Random.Range(0f, 100f);
@@ -68,8 +36,4 @@ public class DropRateManager : MonoBehaviour
             Instantiate(drop.itemPrefab, transform.position, Quaternion.identity);
         }
     }
-
-
-
-
 }

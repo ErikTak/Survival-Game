@@ -24,4 +24,4 @@ MonoBehaviour:
   weaponName: Elemental Shield
   upgradeNum: 6
   weaponDescription: Book +6
-  weaponArtwork: {fileID: 21300000, guid: 772b2bfe21626ff459b17bf0718b21bc, type: 3}
+  weaponArtwork: {fileID: 1352400579, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

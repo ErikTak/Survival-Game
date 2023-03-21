@@ -83,7 +83,8 @@ public class PlayerStats : MonoBehaviour
         healthBar.SetMaxHealth(currentHealth);
         expBar.SetMaxExp(experienceCap);
         expBar.SetExp(1);
-        isDead = false;
+        isDead = true;
+        StartCoroutine(DelayStartGame(1.5f));
     }
 
     void Update()
@@ -100,6 +101,13 @@ public class PlayerStats : MonoBehaviour
 
         Recover();
         healthBar.SetHealth(currentHealth);
+    }
+
+    private IEnumerator DelayStartGame(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        isDead = false;
     }
 
     public void IncreaseExperience(int amount)

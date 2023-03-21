@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: 62c349e9daf868f419cf2ee8984968bb, type: 3}
   damage: 55
-  speed: 12
-  cooldownDuration: 1.6
+  speed: 18
+  cooldownDuration: 1
   destroyAfterSeconds: 4
   pierce: 4
   projCount: 1
@@ -24,4 +24,4 @@ MonoBehaviour:
   weaponName: Flame Orb
   upgradeNum: 6
   weaponDescription: 
-  weaponArtwork: {fileID: 21300000, guid: 0728bd2710ee8fd46b0512608e355384, type: 3}
+  weaponArtwork: {fileID: -1190660444, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

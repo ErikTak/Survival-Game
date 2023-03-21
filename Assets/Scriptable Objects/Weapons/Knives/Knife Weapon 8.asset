@@ -24,4 +24,4 @@ MonoBehaviour:
   weaponName: Magic Arrow
   upgradeNum: 8
   weaponDescription: 
-  weaponArtwork: {fileID: 21300000, guid: 817171407d873ab45a4721f07460efbe, type: 3}
+  weaponArtwork: {fileID: -1195812859, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

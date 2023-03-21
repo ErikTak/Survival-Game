@@ -24,4 +24,4 @@ MonoBehaviour:
   weaponName: Chilling Flame
   upgradeNum: 4
   weaponDescription: Spear +3
-  weaponArtwork: {fileID: 21300000, guid: a9a94f37680c2014f895761ce437d0e0, type: 3}
+  weaponArtwork: {fileID: -1011746647, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}
