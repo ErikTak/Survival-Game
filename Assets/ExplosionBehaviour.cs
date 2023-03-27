@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class ExplosionBehaviour : MonoBehaviour
 {
-    Animator am;
+    ParticleSystem particles;
 
-    // Start is called before the first frame update
     void Start()
     {
         FindObjectOfType<SFXController>().Play("Explosion");
 
-        am = GetComponent<Animator>();
-        float animationDelay = am.GetCurrentAnimatorStateInfo(0).length;
-        StartCoroutine(DelayDestroy(animationDelay));
+        particles = GetComponent<ParticleSystem>();
+        float particleDelay = particles.main.duration;
+
+        StartCoroutine(DelayDestroy(particleDelay));
     }
+
     private IEnumerator DelayDestroy(float delay)
     {
-        // Wait for 2 seconds before ending the game
+        // Wait for the delay before destroying the gameObject
         yield return new WaitForSeconds(delay);
 
         Destroy(gameObject);

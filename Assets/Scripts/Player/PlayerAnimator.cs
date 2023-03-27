@@ -15,6 +15,8 @@ public class PlayerAnimator : MonoBehaviour
 
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_WALK = "PlayerWalk";
+    const string PLAYER_ROLL = "MageThumbleAnim";
+
     const string PLAYER_DIE = "PlayerDie";
     const string PLAYER_GAMESTART_LIGHTNING = "LightningGameStartAnim";
     const string PLAYER_GAMESTART_WAKEUP = "WakeUpAnim";
@@ -37,16 +39,15 @@ public class PlayerAnimator : MonoBehaviour
         {
             if (!ps.isDead)
             {
-                if (pm.moveDir.x != 0 || pm.moveDir.y != 0)
-                {
-                    ChangeAnimationState(PLAYER_WALK);
-
-                    SpriteDirectionChecker();
-                }
-                else
-                {
-                    ChangeAnimationState(PLAYER_IDLE);
-                }
+                    if (pm.moveDir.x != 0 || pm.moveDir.y != 0)
+                    {
+                        ChangeAnimationState(PLAYER_WALK);
+                        SpriteDirectionChecker();
+                    }
+                    else
+                    {
+                        ChangeAnimationState(PLAYER_IDLE);
+                    }
             }
             else
             {

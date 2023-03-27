@@ -20,7 +20,7 @@ MonoBehaviour:
   pierce: 1
   projCount: 2
   offsetRadius: 0.5
-  projDelay: 0.1
+  projDelay: 0.08
   weaponName: Magic Arrow
   upgradeNum: 1
   weaponDescription: Thorws a knife in the direction you are currently moving

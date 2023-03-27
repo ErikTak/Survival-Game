@@ -20,7 +20,7 @@ MonoBehaviour:
   pierce: 1
   projCount: 3
   offsetRadius: 0.5
-  projDelay: 0.1
+  projDelay: 0.08
   weaponName: Magic Arrow
   upgradeNum: 4
   weaponDescription: 

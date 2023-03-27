@@ -18,6 +18,7 @@ public class PlayerStats : MonoBehaviour
     public GameObject levelUpFX;
 
     public bool isDead = false;
+    public bool isRolling = false;
 
 
     [SerializeField] private ColoredFlash flashEffect;
@@ -146,6 +147,12 @@ public class PlayerStats : MonoBehaviour
             expBar.SetMaxExp(experienceCap);
             expBar.SetExp(experience);
         }
+    }
+
+    public void Roll()
+    {
+            invincibilityTimer = invincibilityDuration;
+            isInvincible = true;
     }
 
     public void TakeDamage(float dmg)
