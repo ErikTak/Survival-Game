@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2620264025404789605}
   - component: {fileID: -6258742200583153435}
   m_Layer: 0
-  m_Name: Explosion_Normal
+  m_Name: Explosion_Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,8 +54,8 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5099530623826267333}
   serializedVersion: 8
-  lengthInSec: 1
-  simulationSpeed: 1
+  lengthInSec: 0.8
+  simulationSpeed: 5
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -182,8 +182,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 25
-      minScalar: 18
+      scalar: 55
+      minScalar: 50
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -234,26 +234,26 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 2
-      minColor: {r: 1, g: 0.59621054, b: 0, a: 1}
-      maxColor: {r: 1, g: 0, b: 0, a: 1}
+      minMaxState: 4
+      minColor: {r: 1, g: 0.9831909, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.15690286, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0, b: 0, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 0.4949999, g: 0, b: 1, a: 1}
+        key1: {r: 0.5738436, g: 0, b: 0.6792453, a: 1}
+        key2: {r: 0.6886792, g: 0, b: 0.4923263, a: 0}
+        key3: {r: 1, g: 0.8217412, b: 0, a: 0}
+        key4: {r: 1, g: 0.8217412, b: 0, a: 0}
+        key5: {r: 1, g: 0.8217412, b: 0, a: 0}
+        key6: {r: 1, g: 0.8217412, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 65535
-        ctime2: 0
-        ctime3: 0
-        ctime4: 0
-        ctime5: 0
-        ctime6: 0
+        ctime1: 31997
+        ctime2: 65535
+        ctime3: 65535
+        ctime4: 65535
+        ctime5: 65535
+        ctime6: 65535
         ctime7: 0
         atime0: 0
         atime1: 65535
@@ -264,7 +264,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 2
+        m_NumColorKeys: 3
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
@@ -674,8 +674,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
-    angle: 25
+    type: 4
+    angle: 3
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -1044,11 +1044,11 @@ ParticleSystem:
       repeatInterval: 0.01
       probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
-      minMaxState: 1
-      scalar: 1
+      minMaxState: 3
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1100,7 +1100,7 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1153,7 +1153,7 @@ ParticleSystem:
         m_RotationOrder: 4
     z:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1378,31 +1378,31 @@ ParticleSystem:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 0}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 65535
-        ctime2: 0
+        ctime1: 41056
+        ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
-        atime2: 0
+        atime1: 40863
+        atime2: 65535
         atime3: 0
         atime4: 0
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 2
-        m_NumAlphaKeys: 2
+        m_NumColorKeys: 3
+        m_NumAlphaKeys: 3
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3683,7 +3683,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
     type: 0
     collisionMode: 0
@@ -3883,8 +3883,8 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
-    ratio: 0
+    enabled: 1
+    ratio: 1
     light: {fileID: 0}
     randomDistribution: 1
     color: 1
@@ -4061,20 +4061,20 @@ ParticleSystem:
     worldSpace: 0
     dieWithParticles: 1
     sizeAffectsWidth: 1
-    sizeAffectsLifetime: 0
+    sizeAffectsLifetime: 1
     inheritParticleColor: 1
     generateLightingData: 0
     splitSubEmitterRibbons: 0
     attachRibbonsToTransform: 0
     colorOverLifetime:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 1
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 0}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -4131,8 +4131,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     widthOverTrail:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
+      minMaxState: 3
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4832,7 +4832,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

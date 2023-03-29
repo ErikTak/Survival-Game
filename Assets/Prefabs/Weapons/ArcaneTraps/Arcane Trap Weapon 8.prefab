@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,8 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: d1ec9c68c14bbd9488823602f4e9f3a7, type: 2}
-  explosion: {fileID: 5099530623826267333, guid: 1d6cee4677c26cf44b238c41e7ca492e, type: 3}
-  destroyAfterSeconds: 13
+  explosion: {fileID: 5099530623826267333, guid: 2fc0f42860bf152408f394a686d22c05, type: 3}
 --- !u!70 &7100254107289737732
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
