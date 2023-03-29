@@ -19846,6 +19846,10 @@ MonoBehaviour:
       enemyCount: 0
       enemySpawnCount: 75
       enemyPrefab: {fileID: 1873232008215357874, guid: 02bd175aa9f439b44852b863f3a87ff6, type: 3}
+    - enemyName: Bat 1
+      enemyCount: 0
+      enemySpawnCount: 1
+      enemyPrefab: {fileID: 1873232008215357874, guid: 8fc1c4037b2be3b41ac0f4106112409e, type: 3}
   - waveName: Mixed Bats
     enemyGroups:
     - enemyName: Bat 1

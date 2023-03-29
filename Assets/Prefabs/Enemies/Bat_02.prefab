@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8006294803555600632}
   - component: {fileID: 2243247491723026975}
   - component: {fileID: 4625147248417458318}
+  - component: {fileID: 4377687190857750853}
   m_Layer: 0
   m_Name: Bat_02
   m_TagString: Enemy
@@ -215,6 +216,39 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.8, y: 0.6}
   m_Direction: 1
+--- !u!114 &4377687190857750853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873232008215357874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000053098fbc8d62df16
+  m_ShapePath:
+  - {x: -0.029717047, y: 0.14686076, z: 0}
+  - {x: 0.0057391613, y: 0.28083196, z: 0}
+  - {x: 0.036160734, y: 0.14699817, z: 0}
+  - {x: 0.24967086, y: 0.09874838, z: 0}
+  - {x: 0.2513173, y: 0.026615411, z: 0}
+  - {x: 0.0046279617, y: 0.02811315, z: 0}
+  - {x: -0.0016651835, y: -0.20662206, z: 0}
+  - {x: -0.0048205284, y: 0.028122885, z: 0}
+  - {x: -0.25711572, y: 0.03401978, z: 0}
+  - {x: -0.25876215, y: 0.10312719, z: 0}
+  m_ShapePathHash: 188180850
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 80176
 --- !u!1 &3485363582437838840
 GameObject:
   m_ObjectHideFlags: 0

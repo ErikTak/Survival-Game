@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4471289151443548835}
   - component: {fileID: 905185361522029216}
   - component: {fileID: 7361120823177720972}
+  - component: {fileID: 1886512376350414713}
   m_Layer: 0
   m_Name: terrain_atlas_57
   m_TagString: Prop
@@ -110,10 +111,44 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.484627, y: 0.03656754}
-      - {x: 0.30045363, y: 0.20758575}
-      - {x: -0.3261088, y: 0.19029742}
-      - {x: -0.5512349, y: -0.20070562}
-      - {x: -0.1367693, y: -0.42837697}
-      - {x: 0.29647174, y: -0.38445064}
-      - {x: 0.52570575, y: -0.18933976}
+    - - {x: 0.48053247, y: 0.026331155}
+      - {x: 0.3639192, y: 0.17482933}
+      - {x: -0.31382513, y: 0.17187193}
+      - {x: -0.478419, y: -0.01103631}
+      - {x: -0.75186807, y: -0.19661108}
+      - {x: -0.2944097, y: -0.354675}
+      - {x: -0.009854645, y: -0.60229063}
+      - {x: 0.23914799, y: -0.3537415}
+      - {x: 0.6259981, y: -0.3906746}
+      - {x: 0.76523715, y: -0.13815784}
+--- !u!114 &1886512376350414713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6343452818751505400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000053098fbc8d62df160f4a9f3d
+  m_ShapePath:
+  - {x: -0.43231365, y: -0.013720716, z: 0}
+  - {x: -0.29902208, y: 0.13930169, z: 0}
+  - {x: 0.00202173, y: 0.15744099, z: 0}
+  - {x: 0.36020115, y: 0.10654527, z: 0}
+  - {x: 0.50908947, y: -0.064795375, z: 0}
+  - {x: 0.3399086, y: -0.34257066, z: 0}
+  - {x: 0.019603968, y: -0.47080874, z: 0}
+  - {x: -0.3399676, y: -0.30905196, z: 0}
+  m_ShapePathHash: 761978393
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 37166

@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: -4603683121075503688}
   - component: {fileID: 1120475659315568998}
   - component: {fileID: -3082832276670856149}
+  - component: {fileID: 2932588308270474424}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -498,6 +499,35 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2932588308270474424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6949029344747060810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000053098fbc8d62df16
+  m_ShapePath:
+  - {x: -0.16257076, y: -0.5717075, z: 0}
+  - {x: 0.15450792, y: -0.57795125, z: 0}
+  - {x: 0.23635405, y: -0.64677274, z: 0}
+  - {x: 0.14831144, y: -0.71338063, z: 0}
+  - {x: -0.15547194, y: -0.7135719, z: 0}
+  - {x: -0.24160735, y: -0.6382186, z: 0}
+  m_ShapePathHash: -61155685
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 87718
 --- !u!1 &8685469152644747644
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8006294803555600632}
   - component: {fileID: -2712157015873744941}
   - component: {fileID: -7608096333975511496}
+  - component: {fileID: 8159357004048052939}
   m_Layer: 0
   m_Name: PurpleOrc
   m_TagString: Enemy
@@ -215,6 +216,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8159357004048052939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873232008215357874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000053098fbc8d62df16
+  m_ShapePath:
+  - {x: -0.16573994, y: -0.402329, z: 0}
+  - {x: -0.114398, y: -0.34759915, z: 0}
+  - {x: 0.118901916, y: -0.34965402, z: 0}
+  - {x: 0.18555197, y: -0.39273173, z: 0}
+  - {x: 0.18189782, y: -0.4708373, z: 0}
+  - {x: 0.10013862, y: -0.49555573, z: 0}
+  - {x: -0.094732344, y: -0.49574706, z: 0}
+  - {x: -0.15992299, y: -0.4539052, z: 0}
+  m_ShapePathHash: 1329723933
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 80176
 --- !u!1 &3485363582437838840
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7343363421083065852}
   - component: {fileID: 7486468776748240223}
   - component: {fileID: -7247843736771994062}
+  - component: {fileID: 4655481673431357192}
   m_Layer: 0
   m_Name: terrain_atlas_24
   m_TagString: Prop
@@ -110,11 +111,42 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.0129452795, y: -0.007585764}
-      - {x: -0.3054352, y: -0.080196306}
-      - {x: -0.38431087, y: -0.3286863}
-      - {x: -0.361535, y: -0.68706954}
-      - {x: 0.08953296, y: -0.69865257}
-      - {x: 0.29057303, y: -0.5122626}
-      - {x: 0.31841928, y: -0.1413519}
-      - {x: 0.20304346, y: -0.05325085}
+    - - {x: -0.09348531, y: -0.040975757}
+      - {x: -0.3951708, y: -0.101065055}
+      - {x: -0.43856958, y: -0.28068817}
+      - {x: -0.41370684, y: -0.7392414}
+      - {x: -0.0934383, y: -0.74175507}
+      - {x: 0.2836123, y: -0.61726445}
+      - {x: 0.36152673, y: -0.51434946}
+      - {x: 0.36850423, y: -0.18308938}
+      - {x: 0.20095658, y: -0.07203273}
+--- !u!114 &4655481673431357192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131043320638300485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000053098fbc8d62df160f4a9f3d
+  m_ShapePath:
+  - {x: -0.42831647, y: -0.284725, z: 0}
+  - {x: -0.36568162, y: -0.10501903, z: 0}
+  - {x: 0.13959093, y: -0.08035046, z: 0}
+  - {x: 0.36390847, y: -0.20965499, z: 0}
+  - {x: 0.35716355, y: -0.5247884, z: 0}
+  - {x: 0.12046209, y: -0.61094767, z: 0}
+  - {x: -0.19198266, y: -0.46455568, z: 0}
+  m_ShapePathHash: 1719000871
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 90868

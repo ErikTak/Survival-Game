@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 4634973025989267108}
   - component: {fileID: 4751427361978966878}
   - component: {fileID: 5843066049057041465}
+  - component: {fileID: 981007748850032275}
   m_Layer: 0
   m_Name: Circling Bat
   m_TagString: Enemy
@@ -511,6 +512,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &981007748850032275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6949029344747060810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000053098fbc8d62df16
+  m_ShapePath:
+  - {x: -0.029717047, y: 0.14686076, z: 0}
+  - {x: 0.0057391613, y: 0.28083196, z: 0}
+  - {x: 0.036160734, y: 0.14699817, z: 0}
+  - {x: 0.24967086, y: 0.09874838, z: 0}
+  - {x: 0.2513173, y: 0.026615411, z: 0}
+  - {x: 0.0046279617, y: 0.02811315, z: 0}
+  - {x: -0.0016651835, y: -0.20662206, z: 0}
+  - {x: -0.0048205284, y: 0.028122885, z: 0}
+  - {x: -0.25711572, y: 0.03401978, z: 0}
+  - {x: -0.25876215, y: 0.10312719, z: 0}
+  m_ShapePathHash: 188180850
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 80176
 --- !u!1 &8685469152644747644
 GameObject:
   m_ObjectHideFlags: 0

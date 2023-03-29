@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8501627793435364197}
   - component: {fileID: 6831982340751730182}
   - component: {fileID: -8540573770715085314}
+  - component: {fileID: 228260534598414221}
   m_Layer: 0
   m_Name: terrain_atlas_35
   m_TagString: Prop
@@ -110,11 +111,47 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.14035589, y: 0.39070472}
-      - {x: -0.58990353, y: 0.3169145}
+    - - {x: 0.024796128, y: 0.23020515}
+      - {x: -0.67657346, y: 0.13394505}
       - {x: -0.8322406, y: -0.23101687}
-      - {x: -0.80348176, y: -0.524155}
+      - {x: -0.8355817, y: -0.5048951}
       - {x: -0.60371494, y: -0.82265425}
       - {x: 0.043516815, y: -0.92331004}
       - {x: 0.5398897, y: -0.5755242}
-      - {x: 0.71663713, y: 0.1585818}
+      - {x: 0.7055288, y: -0.24273682}
+      - {x: 0.6703872, y: 0.06326431}
+      - {x: 0.42452788, y: 0.19068176}
+--- !u!114 &228260534598414221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8546991800822795194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000053098fbc8d62df160f4a9f3d
+  m_ShapePath:
+  - {x: -0.8778517, y: -0.4655167, z: 0}
+  - {x: -0.7031783, y: 0.06871492, z: 0}
+  - {x: 0.38502407, y: 0.0679141, z: 0}
+  - {x: 0.6739233, y: -0.10221541, z: 0}
+  - {x: 0.65787333, y: -0.253085, z: 0}
+  - {x: 0.50729805, y: -0.5929172, z: 0}
+  - {x: 0.03727095, y: -0.6483843, z: 0}
+  - {x: 0.031793326, y: -0.7845169, z: 0}
+  - {x: -0.23129416, y: -0.77952343, z: 0}
+  - {x: -0.3372239, y: -0.68964374, z: 0}
+  - {x: -0.5994336, y: -0.6417879, z: 0}
+  m_ShapePathHash: -143795263
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 96588

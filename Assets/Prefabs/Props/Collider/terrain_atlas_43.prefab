@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5877802610741916647}
   - component: {fileID: -7272558849941040248}
   - component: {fileID: -6827389831895427317}
+  - component: {fileID: 791905635407343204}
   m_Layer: 0
   m_Name: terrain_atlas_43
   m_TagString: Prop
@@ -112,9 +113,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.64104354, y: 0.42714417}
-      - {x: 0.4447906, y: 0.48937812}
-      - {x: -0.030334473, y: 0.4996715}
+    - - {x: 0.6305361, y: 0.31156096}
+      - {x: 0.2836746, y: 0.41232267}
+      - {x: -0.14942014, y: 0.3665757}
       - {x: -0.611708, y: 0.07133542}
       - {x: -0.70583194, y: -0.098862976}
       - {x: -0.75, y: -0.2991355}
@@ -124,7 +125,7 @@ PolygonCollider2D:
       - {x: 0.6372086, y: -0.7339229}
       - {x: 0.6970189, y: -0.26493636}
       - {x: 0.77027774, y: 0.02589789}
-      - {x: 0.7323742, y: 0.2285734}
+      - {x: 0.7288717, y: 0.1970507}
 --- !u!114 &-7272558849941040248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,3 +164,39 @@ MonoBehaviour:
   - name: Magnet
     itemPrefab: {fileID: 3922411103447907656, guid: 1fdf6adaf6c40d04c8dbac1428c53f29, type: 3}
     dropRate: 0.5
+--- !u!114 &791905635407343204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6951349522503537687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000053098fbc8d62df160f4a9f3d
+  m_ShapePath:
+  - {x: -0.72201633, y: -0.28938338, z: 0}
+  - {x: -0.6498457, y: 0.022062078, z: 0}
+  - {x: -0.35085264, y: 0.21324414, z: 0}
+  - {x: 0.13335735, y: 0.3545946, z: 0}
+  - {x: 0.5631481, y: 0.28883734, z: 0}
+  - {x: 0.70348203, y: 0.116966486, z: 0}
+  - {x: 0.57156783, y: -0.11657417, z: 0}
+  - {x: 0.5673165, y: -0.6740547, z: 0}
+  - {x: 0.43392885, y: -0.8532943, z: 0}
+  - {x: 0.1963321, y: -0.9158197, z: 0}
+  - {x: -0.08294833, y: -0.8324525, z: 0}
+  - {x: -0.22381824, y: -0.5402578, z: 0}
+  - {x: -0.51645815, y: -0.5114885, z: 0}
+  m_ShapePathHash: -458285783
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 90868

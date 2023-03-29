@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8006294803555600632}
   - component: {fileID: 1910343138982333697}
   - component: {fileID: -4527096474589301007}
+  - component: {fileID: 5242844842833931851}
   m_Layer: 0
   m_Name: Assassin
   m_TagString: Enemy
@@ -215,6 +216,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5242844842833931851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873232008215357874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000053098fbc8d62df16
+  m_ShapePath:
+  - {x: -0.16414465, y: -0.40631726, z: 0}
+  - {x: -0.12716047, y: -0.3739217, z: 0}
+  - {x: 0.10294888, y: -0.37597656, z: 0}
+  - {x: 0.13529988, y: -0.41107774, z: 0}
+  - {x: 0.1340387, y: -0.4493007, z: 0}
+  - {x: 0.08338793, y: -0.4724238, z: 0}
+  - {x: -0.10829244, y: -0.4710198, z: 0}
+  - {x: -0.16311362, y: -0.44433337, z: 0}
+  m_ShapePathHash: -561639554
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 87718
 --- !u!1 &3485363582437838840
 GameObject:
   m_ObjectHideFlags: 0

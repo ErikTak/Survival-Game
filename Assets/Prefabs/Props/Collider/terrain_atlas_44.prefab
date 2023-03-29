@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9055399517056657898}
   - component: {fileID: -3229977217834500299}
   - component: {fileID: 4642852623709179034}
+  - component: {fileID: 663341379641117298}
   m_Layer: 0
   m_Name: terrain_atlas_44
   m_TagString: Prop
@@ -160,3 +161,32 @@ MonoBehaviour:
   - name: Magnet
     itemPrefab: {fileID: 3922411103447907656, guid: 1fdf6adaf6c40d04c8dbac1428c53f29, type: 3}
     dropRate: 0.5
+--- !u!114 &663341379641117298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726624755567708826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000053098fbc8d62df160f4a9f3d
+  m_ShapePath:
+  - {x: -0.31527478, y: -0.17508113, z: 0}
+  - {x: -0.18404558, y: -0.044308066, z: 0}
+  - {x: 0.20334935, y: -0.06516123, z: 0}
+  - {x: 0.25937006, y: -0.21007025, z: 0}
+  - {x: 0.14032337, y: -0.32412374, z: 0}
+  - {x: -0.15141577, y: -0.31034678, z: 0}
+  m_ShapePathHash: 1974495732
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 90868

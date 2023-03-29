@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1638416504161764569}
   - component: {fileID: 4423150546783227302}
   - component: {fileID: 5118548327612215343}
+  - component: {fileID: 259645269964441346}
   m_Layer: 0
   m_Name: terrain_atlas_32
   m_TagString: Prop
@@ -111,8 +112,43 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.46225268, y: 0.3235139}
-      - {x: -0.7890701, y: 0.16126677}
-      - {x: -0.8505819, y: -0.57623124}
+      - {x: -0.83422196, y: 0.1532988}
+      - {x: -0.85854983, y: -0.42218357}
+      - {x: -0.46927258, y: -0.6462669}
       - {x: 0.78077674, y: -0.62784106}
-      - {x: 0.7957834, y: -0.11980879}
+      - {x: 0.84359133, y: -0.09324886}
       - {x: 0.61319876, y: 0.18765725}
+--- !u!114 &259645269964441346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581471896471141779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000053098fbc8d62df160f4a9f3d
+  m_ShapePath:
+  - {x: -0.65540254, y: -0.32191288, z: 0}
+  - {x: -0.82801235, y: 0.12889314, z: 0}
+  - {x: -0.41949564, y: 0.27725476, z: 0}
+  - {x: 0.57847375, y: 0.15250391, z: 0}
+  - {x: 0.8304975, y: -0.116526484, z: 0}
+  - {x: 0.6438796, y: -0.4868762, z: 0}
+  - {x: 0.2645235, y: -0.64824545, z: 0}
+  - {x: -0.22152337, y: -0.5101338, z: 0}
+  - {x: -0.34901103, y: -0.62168545, z: 0}
+  - {x: -0.89348984, y: -0.6004376, z: 0}
+  - {x: -0.869586, y: -0.37467808, z: 0}
+  m_ShapePathHash: -1354276192
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 90868
