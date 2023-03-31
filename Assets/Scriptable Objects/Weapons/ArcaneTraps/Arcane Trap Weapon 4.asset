@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Arcane Trap Weapon 4
   m_EditorClassIdentifier: 
   prefab: {fileID: 8385972741447985216, guid: 38e3a8d04eb1d074cb46b954e98f984f, type: 3}
-  damage: 60
+  damage: 55
   speed: 0
-  cooldownDuration: 4
-  destroyAfterSeconds: 12
+  cooldownDuration: 1.9
+  destroyAfterSeconds: 8
   pierce: 1
   projCount: 4
-  offsetRadius: 30
-  projDelay: 0.1
+  offsetRadius: 20
+  projDelay: 0.05
   weaponName: Arcane Trap
   upgradeNum: 4
   weaponDescription: Traps persist for even longer

@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Knife Weapon 3
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: a92ba61cae59cf84eb6d21aad41579ff, type: 3}
-  damage: 45
+  damage: 48
   speed: 12
-  cooldownDuration: 3
+  cooldownDuration: 1.5
   destroyAfterSeconds: 3.5
   pierce: 1
   projCount: 3
   offsetRadius: 0.5
-  projDelay: 0.08
+  projDelay: 0.067
   weaponName: Magic Arrow
   upgradeNum: 3
   weaponDescription: Knife upgraded to +2

@@ -15,12 +15,12 @@ MonoBehaviour:
   prefab: {fileID: 8385972741447985216, guid: 0911375212fcb0242b984fb16c4621c1, type: 3}
   damage: 50
   speed: 0
-  cooldownDuration: 4
-  destroyAfterSeconds: 10
+  cooldownDuration: 2
+  destroyAfterSeconds: 8
   pierce: 1
   projCount: 4
-  offsetRadius: 30
-  projDelay: 0.1
+  offsetRadius: 20
+  projDelay: 0.05
   weaponName: Arcane Trap
   upgradeNum: 2
   weaponDescription: Places one more arcane trap

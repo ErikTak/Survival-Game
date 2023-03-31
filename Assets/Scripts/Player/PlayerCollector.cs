@@ -19,18 +19,33 @@ public class PlayerCollector : MonoBehaviour
         playerCollector.radius = player.currentMagnet;
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void FixedUpdate()
     {
-        // Check if the gameobject has ICollectible interface
-        if (col.gameObject.TryGetComponent(out ICollectible collectible))
-        {
-            // gets the rb of the object and applies force * pullSpeed to it in the direction of the player
-            Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D>();
-            Vector2 forceDirection = (transform.position - col.transform.position).normalized;
-            rb.AddForce(forceDirection * pullSpeed);
+        // Find all the colliders in the collector radius
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, playerCollector.radius);
 
-            // If it does call collect method
-            collectible.Collect();
+        foreach (Collider2D col in colliders)
+        {
+            // Check if the gameobject has ICollectible interface
+            if (col.gameObject.TryGetComponent(out ICollectible collectible))
+            {
+                // Move the object towards the player
+                Vector3 direction = (transform.position - col.transform.position).normalized;
+                float distance = Vector3.Distance(transform.position, col.transform.position);
+                float step = pullSpeed * Time.deltaTime;
+
+                if (distance > step)
+                {
+                    col.transform.Translate(direction * step, Space.World);
+                }
+                else
+                {
+                    col.transform.position = transform.position;
+                }
+
+                // If it does call collect method
+                collectible.Collect();
+            }
         }
     }
 }

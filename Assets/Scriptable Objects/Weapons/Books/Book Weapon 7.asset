@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Book Weapon 7
   m_EditorClassIdentifier: 
   prefab: {fileID: 4075502494000315854, guid: cdd0741a28f42aa47bf9046ab970065b, type: 3}
-  damage: 110
+  damage: 60
   speed: 80
-  cooldownDuration: 8
-  destroyAfterSeconds: 7.5
+  cooldownDuration: 2.8
+  destroyAfterSeconds: 2.2
   pierce: 1
-  projCount: 7
+  projCount: 9
   offsetRadius: 9
   projDelay: 0
   weaponName: Elemental Shield

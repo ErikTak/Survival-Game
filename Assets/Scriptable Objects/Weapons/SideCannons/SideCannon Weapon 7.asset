@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: 289e6e0ae1a685c43a906f0c20528443, type: 3}
   damage: 50
-  speed: 14
-  cooldownDuration: 2.5
+  speed: 15
+  cooldownDuration: 1.1
   destroyAfterSeconds: 3.5
   pierce: 1
-  projCount: 8
-  offsetRadius: 10
+  projCount: 6
+  offsetRadius: 15
   projDelay: 0
   weaponName: Firebolt Wand
   upgradeNum: 7

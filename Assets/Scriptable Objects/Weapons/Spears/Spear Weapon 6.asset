@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Spear Weapon 6
   m_EditorClassIdentifier: 
   prefab: {fileID: 8385972741447985216, guid: d9d04db9dae88174e9de25ab691d7a7a, type: 3}
-  damage: 65
+  damage: 40
   speed: 14
-  cooldownDuration: 2.2
+  cooldownDuration: 1.8
   destroyAfterSeconds: 4
-  pierce: 1
+  pierce: 3
   projCount: 2
   offsetRadius: 0
   projDelay: 0.2

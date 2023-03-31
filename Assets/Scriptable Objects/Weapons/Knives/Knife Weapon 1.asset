@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Knife Weapon 1
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: 0e113a6b6f2c32b41ac54b6f96efe80e, type: 3}
-  damage: 40
+  damage: 44
   speed: 12
-  cooldownDuration: 3
+  cooldownDuration: 1.6
   destroyAfterSeconds: 3.5
   pierce: 1
   projCount: 2
   offsetRadius: 0.5
-  projDelay: 0.08
+  projDelay: 0.1
   weaponName: Magic Arrow
   upgradeNum: 1
   weaponDescription: Thorws a knife in the direction you are currently moving

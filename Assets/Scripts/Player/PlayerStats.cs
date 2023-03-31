@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour
     public GameObject levelUpFX;
 
     public bool isDead = false;
-    public bool isRolling = false;
+    public bool isDashing = false;
 
 
     [SerializeField] private ColoredFlash flashEffect;
@@ -149,7 +149,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void Roll()
+    public void Dash()
     {
             invincibilityTimer = invincibilityDuration;
             isInvincible = true;

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SideCannon Weapon 0
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: 90471dab36b47f743a5427f8f6de8a46, type: 3}
-  damage: 40
-  speed: 10
-  cooldownDuration: 3.5
+  damage: 30
+  speed: 15
+  cooldownDuration: 1.2
   destroyAfterSeconds: 3.5
   pierce: 1
   projCount: 2

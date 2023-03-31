@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Starshot Weapon 0
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: a11e4ea5a6b3c1947a0a1d370818b9b4, type: 3}
-  damage: 50
+  damage: 40
   speed: 10
-  cooldownDuration: 3.5
+  cooldownDuration: 3.2
   destroyAfterSeconds: 4
   pierce: 1
   projCount: 4

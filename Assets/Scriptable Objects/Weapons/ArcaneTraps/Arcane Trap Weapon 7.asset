@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Arcane Trap Weapon 7
   m_EditorClassIdentifier: 
   prefab: {fileID: 8385972741447985216, guid: 3889cfa907ca98c4282af231eccf5b77, type: 3}
-  damage: 80
+  damage: 61
   speed: 0
-  cooldownDuration: 3
-  destroyAfterSeconds: 12
-  pierce: 1
+  cooldownDuration: 1.8
+  destroyAfterSeconds: 8
+  pierce: 2
   projCount: 5
-  offsetRadius: 40
-  projDelay: 0.1
+  offsetRadius: 30
+  projDelay: 0.04
   weaponName: Arcane Trap
   upgradeNum: 7
   weaponDescription: Traps deal more damage

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Starshot Weapon 3
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: ceeb1275aa4fee64a8f8386d73b4da30, type: 3}
-  damage: 60
+  damage: 40
   speed: 12
   cooldownDuration: 3.1
   destroyAfterSeconds: 3.8
-  pierce: 1
+  pierce: 2
   projCount: 8
   offsetRadius: 0
   projDelay: 0

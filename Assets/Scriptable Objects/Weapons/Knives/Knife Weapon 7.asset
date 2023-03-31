@@ -15,12 +15,12 @@ MonoBehaviour:
   prefab: {fileID: 8801865291643520016, guid: 9611754123f53b64a823efd381bebcc9, type: 3}
   damage: 60
   speed: 15
-  cooldownDuration: 3
+  cooldownDuration: 1.4
   destroyAfterSeconds: 3.2
   pierce: 1
   projCount: 4
   offsetRadius: 0.5
-  projDelay: 0.08
+  projDelay: 0.05
   weaponName: Magic Arrow
   upgradeNum: 7
   weaponDescription: 

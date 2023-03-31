@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Pistol Weapon 4
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: a852b31df194d0545aae23e5d6ab766a, type: 3}
-  damage: 50
+  damage: 55
   speed: 18
-  cooldownDuration: 1
+  cooldownDuration: 0.7
   destroyAfterSeconds: 4
-  pierce: 3
+  pierce: 1
   projCount: 1
   offsetRadius: 0
   projDelay: 0

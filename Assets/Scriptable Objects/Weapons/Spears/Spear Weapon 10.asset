@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Spear Weapon 10
   m_EditorClassIdentifier: 
   prefab: {fileID: 8385972741447985216, guid: cfc8f60932919964d8e283b828f9dbe4, type: 3}
-  damage: 70
+  damage: 50
   speed: 16
-  cooldownDuration: 2
+  cooldownDuration: 1.6
   destroyAfterSeconds: 4
-  pierce: 1
-  projCount: 4
+  pierce: 4
+  projCount: 3
   offsetRadius: 0
-  projDelay: 0.1
+  projDelay: 0.2
   weaponName: Chilling Flame
   upgradeNum: 10
   weaponDescription: Spear +5

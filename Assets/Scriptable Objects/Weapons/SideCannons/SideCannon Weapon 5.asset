@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: SideCannon Weapon 5
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: f8d3fa5e118b6ff4ea12377780647741, type: 3}
-  damage: 50
-  speed: 14
-  cooldownDuration: 3
+  damage: 46
+  speed: 15
+  cooldownDuration: 1.15
   destroyAfterSeconds: 3.5
   pierce: 1
-  projCount: 6
-  offsetRadius: 15
+  projCount: 4
+  offsetRadius: 22.5
   projDelay: 0
   weaponName: Firebolt Wand
   upgradeNum: 5

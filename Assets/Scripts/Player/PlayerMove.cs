@@ -5,6 +5,8 @@ using System.Linq;
 
 public class PlayerMove : MonoBehaviour
 {
+    public DashBar dashBar;
+
 
     // Movement
     [HideInInspector]
@@ -16,12 +18,15 @@ public class PlayerMove : MonoBehaviour
     [HideInInspector]
     public Vector2 lastMovedVector;
 
-    private float lastRollTime;
+    private float lastDashTime;
 
     // References
     Animator am;
     Rigidbody2D rb;
     PlayerStats player;
+
+    public float dashBarFillTime = 2.0f;
+    private float currentDashBarFillTime;
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +35,21 @@ public class PlayerMove : MonoBehaviour
         player = GetComponent<PlayerStats>();
         rb = GetComponent<Rigidbody2D>();
         lastMovedVector = new Vector2(1, 0f); // If we didn't move at the start of the game
+        dashBar.SetMaxEnergy(dashBarFillTime);
+        currentDashBarFillTime = dashBarFillTime;
     }
 
     // Update is called once per frame
     void Update()
     {
         InputManagement();
+
+        // If the player is not dashing, fill up the dash bar over time
+        if (!player.isDashing)
+        {
+            currentDashBarFillTime += Time.deltaTime;
+            dashBar.SetEnergy(currentDashBarFillTime);
+        }
     }
 
     private void FixedUpdate()
@@ -69,7 +83,7 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            Roll();
+            Dash();
         }
     }
 
@@ -81,21 +95,20 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    public void Roll()
+    public void Dash()
     {
-        if (Time.time - lastRollTime >= 2f)
+        if (Time.time - lastDashTime >= dashBarFillTime)
         {
-            player.Roll();
+            player.Dash();
 
-            player.isRolling = true;
-            Debug.Log("isRolling is: " + player.isRolling);
-            lastRollTime = Time.time;
+            player.isDashing = true;
+            lastDashTime = Time.time;
 
-            float rollDistance = 5f;
-            Vector2 rollDirection = lastMovedVector.normalized;
-            Vector2 targetPosition = rb.position + rollDirection * rollDistance;
+            float dashDistance = 5f;
+            Vector2 dashDirection = lastMovedVector.normalized;
+            Vector2 targetPosition = rb.position + dashDirection * dashDistance;
 
-            float rollTime = 0.2f;
+            float dashTime = 0.2f;
             float elapsedTime = 0f;
 
             // Temporarily ignore collisions with enemies
@@ -105,24 +118,21 @@ public class PlayerMove : MonoBehaviour
                 Physics2D.IgnoreCollision(GetComponent<Collider2D>(), enemyCollider, true);
             }
 
+            // Set the dash bar to 0
+            currentDashBarFillTime = 0.0f;
+            dashBar.SetEnergy(currentDashBarFillTime);
 
-            StartCoroutine(RollCoroutine(targetPosition, rollTime, elapsedTime));
+            StartCoroutine(DashCoroutine(targetPosition, dashTime, elapsedTime));
         }
     }
 
-    IEnumerator RollCoroutine(Vector2 targetPosition, float rollTime, float elapsedTime)
+    IEnumerator DashCoroutine(Vector2 targetPosition, float dashTime, float elapsedTime)
     {
-        while (elapsedTime < rollTime)
+        while (elapsedTime < dashTime)
         {
-            float t = Mathf.Clamp01(elapsedTime / rollTime); // limit the interpolation factor to the range [0, 1]
+            float t = Mathf.Clamp01(elapsedTime / dashTime); // limit the interpolation factor to the range [0, 1]
             rb.MovePosition(Vector2.Lerp(rb.position, targetPosition, t));
-             
-            // rb.MovePosition(Vector2.Lerp(rb.position, targetPosition, elapsedTime / rollTime));
-            Debug.Log("rb.position:" + rb.position);
-            Debug.Log("targetPosition" + targetPosition);
-            Debug.Log("elapsedTime: " + elapsedTime);
-            Debug.Log("rollTime" + rollTime);
-            Debug.Log("elapsedTime / rollTime" + elapsedTime / rollTime);
+
             elapsedTime += Time.deltaTime;
             yield return null;
         }
@@ -135,7 +145,6 @@ public class PlayerMove : MonoBehaviour
         }
 
 
-        player.isRolling = false;
-        Debug.Log("isRolling is: " + player.isRolling);
+        player.isDashing = false;
     }
 }

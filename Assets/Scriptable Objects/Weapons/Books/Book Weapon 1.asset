@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Book Weapon 1
   m_EditorClassIdentifier: 
   prefab: {fileID: 4075502494000315854, guid: 206697192b190e548b1291bf323facc0, type: 3}
-  damage: 70
+  damage: 40
   speed: 60
-  cooldownDuration: 10
-  destroyAfterSeconds: 8.5
+  cooldownDuration: 3
+  destroyAfterSeconds: 2.2
   pierce: 1
   projCount: 3
   offsetRadius: 5

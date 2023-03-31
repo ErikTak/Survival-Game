@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Starshot Weapon 7
   m_EditorClassIdentifier: 
   prefab: {fileID: 8801865291643520016, guid: f042f816159fd1a47b5394ffcd89bf9f, type: 3}
-  damage: 70
+  damage: 40
   speed: 20
   cooldownDuration: 2.9
   destroyAfterSeconds: 3.6
-  pierce: 2
-  projCount: 12
+  pierce: 4
+  projCount: 10
   offsetRadius: 0
   projDelay: 0
   weaponName: Energy Orb
