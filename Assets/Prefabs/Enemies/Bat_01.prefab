@@ -126,6 +126,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePattern: 0
+  stopProbability: 0
+  currentStopTime: 0
+  isStopping: 0
+  minStopTime: 0
+  maxStopTime: 0
+  sidestepProbability: 1
+  sidestepDistance: 5
 --- !u!114 &7647625056341073410
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,8 +13,6 @@ public class DropRateManager : MonoBehaviour
         public float dropRate;
     }
 
-    private bool isQuitting = false;
-
     public List<Drops> drops;
 
     public void SpawnTheDrop()

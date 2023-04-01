@@ -141,7 +141,7 @@ public class EnemyMove : MonoBehaviour
 
     void Circle()
     {
-        
+
         if (Vector2.Distance(transform.position, player.position) <= 5f)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemy.currentMoveSpeed * 10 * Time.deltaTime); // Constantly move towards the players

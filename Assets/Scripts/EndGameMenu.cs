@@ -6,29 +6,86 @@ public class EndGameMenu : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI scoreDisplay;
     public TMPro.TextMeshProUGUI highScoreDisplay;
+    public TMPro.TextMeshProUGUI highScoreLabelDisplay;
+
+    int rewardOption;
 
     GameUiElements gameUI;
 
     void Start()
     {
-        highScoreDisplay.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+        rewardOption = PlayerPrefs.GetInt("RewardOption");
+
+        Debug.Log("RewardOption is: " + rewardOption);
+
+        if (rewardOption == 0)
+        {
+            highScoreDisplay.text = PlayerPrefs.GetInt("BasicHighScore", 0).ToString();
+            highScoreLabelDisplay.text = "Basic Mode High Score:"; 
+        }
+        if (rewardOption == 1)
+        {
+            highScoreDisplay.text = PlayerPrefs.GetInt("RandomHighScore", 0).ToString();
+            highScoreLabelDisplay.text = "Random Mode High Score:";
+        }
+        if (rewardOption == 2)
+        {
+            highScoreDisplay.text = PlayerPrefs.GetInt("ChooseHighScore", 0).ToString();
+            highScoreLabelDisplay.text = "Choose Mode High Score:";
+        }
     }
 
     public void DisplayScores(int score)
     {
+        rewardOption = PlayerPrefs.GetInt("RewardOption");
+        Debug.Log("RewardOption is: " + rewardOption);
+
         gameUI = FindObjectOfType<GameUiElements>();
 
         scoreDisplay.text = score.ToString();
         
-        if (score > PlayerPrefs.GetInt("HighScore", 0))
+        if (rewardOption == 0)
         {
-            PlayerPrefs.SetInt("HighScore", score);
-            highScoreDisplay.text = score.ToString();
+            if (score > PlayerPrefs.GetInt("BasicHighScore", 0))
+            {
+                PlayerPrefs.SetInt("BasicHighScore", score);
+                highScoreDisplay.text = score.ToString();
+            }
+        }
+        if (rewardOption == 1)
+        {
+            if (score > PlayerPrefs.GetInt("RandomHighScore", 0))
+            {
+                PlayerPrefs.SetInt("RandomHighScore", score);
+                highScoreDisplay.text = score.ToString();
+            }
+        }
+        if (rewardOption == 2)
+        {
+            if (score > PlayerPrefs.GetInt("ChooseHighScore", 0))
+            {
+                PlayerPrefs.SetInt("ChooseHighScore", score);
+                highScoreDisplay.text = score.ToString();
+            }
         }
     }
 
     public void ResetHighScore()
     {
-        PlayerPrefs.DeleteKey("HighScore");
+        if (rewardOption == 0)
+        {
+            PlayerPrefs.DeleteKey("BasicHighScore");
+            highScoreDisplay.text = PlayerPrefs.GetInt("BasicHighScore", 0).ToString();
+        }
+        if (rewardOption == 1)
+        {
+            PlayerPrefs.DeleteKey("RandomHighScore");
+            highScoreDisplay.text = PlayerPrefs.GetInt("RandomHighScore", 0).ToString();
+        }
+        if (rewardOption == 2)
+        {
+            PlayerPrefs.DeleteKey("ChooseHighScore");
+            highScoreDisplay.text = PlayerPrefs.GetInt("ChooseHighScore", 0).ToString();
+        }
     }
 }
