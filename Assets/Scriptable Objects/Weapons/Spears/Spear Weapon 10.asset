@@ -23,5 +23,6 @@ MonoBehaviour:
   projDelay: 0.2
   weaponName: Chilling Flame
   upgradeNum: 10
-  weaponDescription: Spear +5
+  weaponDescription: Chilling Flames pierce an additional enemy and the cooldown
+    is reduced by 0.1 sec
   weaponArtwork: {fileID: -1011746647, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

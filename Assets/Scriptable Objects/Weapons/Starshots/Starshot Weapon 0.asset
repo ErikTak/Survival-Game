@@ -23,5 +23,5 @@ MonoBehaviour:
   projDelay: 0
   weaponName: Energy Orb
   upgradeNum: 0
-  weaponDescription: 
+  weaponDescription: Fire 4 Energy Orb projectiles in 4 different directions
   weaponArtwork: {fileID: -777238298, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

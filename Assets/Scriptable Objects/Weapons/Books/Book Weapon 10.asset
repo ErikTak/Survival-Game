@@ -23,5 +23,5 @@ MonoBehaviour:
   projDelay: 0
   weaponName: Elemental Shield
   upgradeNum: 10
-  weaponDescription: Book +10
+  weaponDescription: Gain 1 additional projectile and deal 10 more damage
   weaponArtwork: {fileID: 1352400579, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

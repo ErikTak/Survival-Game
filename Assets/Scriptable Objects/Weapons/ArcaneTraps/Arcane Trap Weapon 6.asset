@@ -23,5 +23,6 @@ MonoBehaviour:
   projDelay: 0.04
   weaponName: Arcane Trap
   upgradeNum: 6
-  weaponDescription: Cooldown is lowered and places +1 trap
+  weaponDescription: Places 1 additional Arcane Trap, traps can explode twice and
+    cooldown is reduced by 0.1 sec
   weaponArtwork: {fileID: 137307877, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

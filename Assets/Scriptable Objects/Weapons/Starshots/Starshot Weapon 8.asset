@@ -23,5 +23,6 @@ MonoBehaviour:
   projDelay: 0
   weaponName: Energy Orb
   upgradeNum: 8
-  weaponDescription: 
+  weaponDescription: additional 2 projectiles and  the cooldown of your Energy Orbs
+    are reduced by 0.1 sec
   weaponArtwork: {fileID: -777238298, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

@@ -23,5 +23,6 @@ MonoBehaviour:
   projDelay: 0
   weaponName: Damaging Aura
   upgradeNum: 3
-  weaponDescription: Garlic +2
+  weaponDescription: The aura deals 3 more damage and the cooldown is reduced by
+    0.5 sec
   weaponArtwork: {fileID: -871891813, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

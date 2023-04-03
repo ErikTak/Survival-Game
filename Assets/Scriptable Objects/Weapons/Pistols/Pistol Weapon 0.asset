@@ -21,7 +21,8 @@ MonoBehaviour:
   projCount: 1
   offsetRadius: 0
   projDelay: 0
-  weaponName: Flame Orb
+  weaponName: Fireball
   upgradeNum: 0
-  weaponDescription: 
+  weaponDescription: Shoot a Fireball towards your mouse position when left click
+    is pressed.
   weaponArtwork: {fileID: -1190660444, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

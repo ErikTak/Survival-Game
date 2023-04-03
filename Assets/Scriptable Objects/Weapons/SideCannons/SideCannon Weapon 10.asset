@@ -21,7 +21,7 @@ MonoBehaviour:
   projCount: 8
   offsetRadius: 11.25
   projDelay: 0
-  weaponName: Firebolt Wand
+  weaponName: Supporting Firebolts
   upgradeNum: 10
-  weaponDescription: 
+  weaponDescription: Firebolts deal 4 more damage and fire an additional 2 projectile
   weaponArtwork: {fileID: 396185469, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

@@ -23,5 +23,5 @@ MonoBehaviour:
   projDelay: 0.067
   weaponName: Arcane Trap
   upgradeNum: 1
-  weaponDescription: Places one more arcane trap
+  weaponDescription: Places 1 additional Arcane Trap
   weaponArtwork: {fileID: 137307877, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

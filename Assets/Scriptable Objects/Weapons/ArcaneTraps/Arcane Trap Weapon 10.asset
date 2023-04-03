@@ -23,5 +23,5 @@ MonoBehaviour:
   projDelay: 0.034
   weaponName: Arcane Trap
   upgradeNum: 10
-  weaponDescription: Traps can now explode twice, places an extra trap
+  weaponDescription: Place 1 additional Arcane Trap
   weaponArtwork: {fileID: 137307877, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

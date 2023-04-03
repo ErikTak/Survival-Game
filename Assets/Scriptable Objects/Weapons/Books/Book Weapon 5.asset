@@ -23,5 +23,6 @@ MonoBehaviour:
   projDelay: 0
   weaponName: Elemental Shield
   upgradeNum: 5
-  weaponDescription: Book +5
+  weaponDescription: Gain 1 additional projectile and the cooldown is reduced by
+    0.2 sec
   weaponArtwork: {fileID: 1352400579, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

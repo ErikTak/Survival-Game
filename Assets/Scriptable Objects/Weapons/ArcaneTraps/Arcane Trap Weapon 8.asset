@@ -23,5 +23,5 @@ MonoBehaviour:
   projDelay: 0.04
   weaponName: Arcane Trap
   upgradeNum: 8
-  weaponDescription: Traps persist for longer
+  weaponDescription: Arcane Traps deal 4 more damage
   weaponArtwork: {fileID: 137307877, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

@@ -23,5 +23,6 @@ MonoBehaviour:
   projDelay: 0.034
   weaponName: Magic Arrow
   upgradeNum: 10
-  weaponDescription: 
+  weaponDescription: Magic Arrows deal 4 more damage and the cooldown is reduced
+    by 0.1 sec
   weaponArtwork: {fileID: -1195812859, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

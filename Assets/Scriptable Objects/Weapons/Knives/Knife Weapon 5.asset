@@ -23,5 +23,5 @@ MonoBehaviour:
   projDelay: 0.067
   weaponName: Magic Arrow
   upgradeNum: 5
-  weaponDescription: 
+  weaponDescription: Magic Arrows deal 4 more damage
   weaponArtwork: {fileID: -1195812859, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

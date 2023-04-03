@@ -23,6 +23,6 @@ MonoBehaviour:
   projDelay: 0
   weaponName: Elemental Shield
   upgradeNum: 0
-  weaponDescription: Circle elemental projectiles around the player that explode
+  weaponDescription: Circle 2 elemental projectiles around the player that explode
     when touching an enemy
   weaponArtwork: {fileID: 1352400579, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

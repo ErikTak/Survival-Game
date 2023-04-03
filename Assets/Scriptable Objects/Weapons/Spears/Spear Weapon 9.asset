@@ -23,5 +23,5 @@ MonoBehaviour:
   projDelay: 0.2
   weaponName: Chilling Flame
   upgradeNum: 9
-  weaponDescription: Spear +5
+  weaponDescription: 
   weaponArtwork: {fileID: -1011746647, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

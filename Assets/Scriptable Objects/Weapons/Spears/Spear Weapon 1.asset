@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 8385972741447985216, guid: 2056a226d8d4cf3469ab202f56e8e118, type: 3}
   damage: 35
-  speed: 12
+  speed: 16
   cooldownDuration: 2
   destroyAfterSeconds: 4
   pierce: 2
@@ -23,5 +23,5 @@ MonoBehaviour:
   projDelay: 0.2
   weaponName: Chilling Flame
   upgradeNum: 1
-  weaponDescription: +5 dmg to all spears
+  weaponDescription: Chilling Falmes deal 5 more damage
   weaponArtwork: {fileID: -1011746647, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

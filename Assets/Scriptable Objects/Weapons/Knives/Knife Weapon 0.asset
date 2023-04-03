@@ -23,5 +23,5 @@ MonoBehaviour:
   projDelay: 0.1
   weaponName: Magic Arrow
   upgradeNum: 0
-  weaponDescription: Knife 0
+  weaponDescription: Fires 2 Magic Arrows in the direction you are moving at
   weaponArtwork: {fileID: -1195812859, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

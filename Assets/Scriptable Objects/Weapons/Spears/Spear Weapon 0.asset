@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 8385972741447985216, guid: 4d0227b393d6d1b4a9ddfb1c50039f65, type: 3}
   damage: 30
-  speed: 8
+  speed: 16
   cooldownDuration: 2
   destroyAfterSeconds: 4
   pierce: 2
@@ -23,6 +23,5 @@ MonoBehaviour:
   projDelay: 0.2
   weaponName: Chilling Flame
   upgradeNum: 0
-  weaponDescription: Enable a spear projectile that automatically homes to the nearest
-    enemy
+  weaponDescription: Fire a Chilling Flame projectile towards the closest enemy
   weaponArtwork: {fileID: -1011746647, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

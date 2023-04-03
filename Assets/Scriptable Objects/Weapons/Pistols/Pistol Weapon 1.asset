@@ -21,7 +21,7 @@ MonoBehaviour:
   projCount: 1
   offsetRadius: 0
   projDelay: 0
-  weaponName: Flame Orb
+  weaponName: Fireball
   upgradeNum: 1
-  weaponDescription: 
+  weaponDescription: Fireballs deal 5 more damage
   weaponArtwork: {fileID: -1190660444, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

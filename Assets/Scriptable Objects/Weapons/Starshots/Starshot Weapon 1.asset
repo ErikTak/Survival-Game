@@ -23,5 +23,5 @@ MonoBehaviour:
   projDelay: 0
   weaponName: Energy Orb
   upgradeNum: 1
-  weaponDescription: 
+  weaponDescription: Energy Orbs can now pierce the first enemy they touch
   weaponArtwork: {fileID: -777238298, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

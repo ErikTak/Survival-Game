@@ -23,5 +23,5 @@ MonoBehaviour:
   projDelay: 0
   weaponName: Energy Orb
   upgradeNum: 10
-  weaponDescription: 
+  weaponDescription: Fires an additional 2 projectiles
   weaponArtwork: {fileID: -777238298, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}

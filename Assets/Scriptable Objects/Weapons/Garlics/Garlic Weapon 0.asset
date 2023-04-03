@@ -23,5 +23,6 @@ MonoBehaviour:
   projDelay: 0
   weaponName: Damaging Aura
   upgradeNum: 0
-  weaponDescription: Garlic 0
+  weaponDescription: Create an aura around the player that persists for 2.5 sec damaging
+    any enemy it touches
   weaponArtwork: {fileID: -871891813, guid: eea2d750e7395aa448b7edb9b6ff23f6, type: 3}
