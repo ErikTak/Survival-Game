@@ -46,4 +46,24 @@ public class SFXController : MonoBehaviour
         }
         s.source.Play();
     }
+
+    public void MuteHandler(bool mute)
+    {
+        if (mute)
+        {
+            AudioListener.volume = 0;
+            PlayerPrefs.SetInt("muted", 0);
+        }
+        else
+        {
+            AudioListener.volume = PlayerPrefs.GetFloat("Volume", 0.5f);
+            PlayerPrefs.SetInt("muted", 1);
+        }
+    }
+
+    public void VolumeHandler(float volume)
+    {
+        AudioListener.volume = volume;
+        PlayerPrefs.SetFloat("Volume", volume);
+    }
 }

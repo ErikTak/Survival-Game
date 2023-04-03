@@ -7,44 +7,26 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;
-    
-    /*
-    public Dropdown resolutionDropdown;
-
-    Resolution[] resolutions;
+    public Slider volumeSlider;
+    public Toggle muteToggle;
 
     private void Start()
     {
-        resolutions = Screen.resolutions;
-
-        resolutionDropdown.ClearOptions();
-
-        List<string> options = new List<string>();
-
-        int currentResolutionIndex = 0;
-        for (int i = 0; i < resolutions.Length; i++)
+        float volume = PlayerPrefs.GetFloat("Volume", 0.5f);
+        float muted = PlayerPrefs.GetInt("muted", 1);
+        SetVolume(volume);
+        volumeSlider.value = volume;
+        
+        if (muted == 0)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
-
-            if (resolutions[i].width == Screen.currentResolution.width &&
-                resolutions[i].height == Screen.currentResolution.height)
-            {
-                currentResolutionIndex = i;
-            }
+            muteToggle.isOn = true;
+        }   
+        else
+        {
+            muteToggle.isOn = false;
         }
 
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
     }
-    public void SetResolution(int resolutionIndex)
-    {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
-    */
 
     // Scene Management
 
@@ -59,19 +41,15 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-
-    // Settings Menu
+    public void SetMute(bool mute)
+    {
+        Debug.Log("mute =" + mute);
+        FindObjectOfType<SFXController>().MuteHandler(mute);
+    }
 
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("Volume", volume);
+        FindObjectOfType<SFXController>().VolumeHandler(volume);
     }
-    public void SetQuality(int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
-    }
-    public void SetFullScreen(bool isFullscreen)
-    {
-        Screen.fullScreen = isFullscreen;
-    }
+
 }

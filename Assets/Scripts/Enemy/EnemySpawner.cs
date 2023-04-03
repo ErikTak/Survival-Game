@@ -100,6 +100,7 @@ public class EnemySpawner : MonoBehaviour
             // LAST CALL WHEN ALL WAVES ARE COMPLETE
             nextWave = 0;
             Debug.Log("All waves complete");
+            FindObjectOfType<PauseMenu>().EndGameMenu();
         }
         else
         {

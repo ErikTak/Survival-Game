@@ -163,11 +163,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drops:
   - name: Blue Gem
-    itemPrefab: {fileID: 7831860376292965640, guid: 8d55e456f1ccbcc4c97de752c46044e4, type: 3}
+    itemPrefab: {fileID: 7831860376292965640, guid: 2f31af4c5a375d440b248b7237dbc28e, type: 3}
     dropRate: 100
-  - name: Pruple Gem
+  - name: Green Gem
+    itemPrefab: {fileID: 7831860376292965640, guid: 8d55e456f1ccbcc4c97de752c46044e4, type: 3}
+    dropRate: 20
+  - name: Purple Gem
     itemPrefab: {fileID: 7831860376292965640, guid: 431f4b9fad212574c9cf27882ea7644e, type: 3}
-    dropRate: 5
+    dropRate: 1
 --- !u!114 &8006294803555600632
 MonoBehaviour:
   m_ObjectHideFlags: 0

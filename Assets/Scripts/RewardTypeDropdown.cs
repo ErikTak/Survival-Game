@@ -5,11 +5,28 @@ using TMPro;
 
 public class RewardTypeDropdown : MonoBehaviour
 {
-    public TMP_Dropdown dropdown; // Reference to the TMP_Dropdown component
+    public TMP_Dropdown dropdown;
+    public TMPro.TextMeshProUGUI gameTypeText;
 
     private void Update()
     {
-        dropdown.value = PlayerPrefs.GetInt("RewardOption", 0);
+        int rewardOption = PlayerPrefs.GetInt("RewardOption", 0);
+
+        dropdown.value = rewardOption;
+        
+        if (rewardOption == 0)
+        {
+            gameTypeText.text = "Your game mode is currently set to Basic. All upgrades you get for leveling up have been preselected for you.";
+        }
+        if (rewardOption == 1)
+        {
+            gameTypeText.text = "Your game mode is currently set to Random. Your upgrades will be randomly selected when leveling up.";
+        }
+        if (rewardOption == 2)
+        {
+            gameTypeText.text = "Your game mode is currently set to Choose. You get to see all possible upgrade options and choose the one you like the most.";
+        }
+
     }
 
     public void SetDropdownValue()

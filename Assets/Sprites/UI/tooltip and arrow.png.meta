@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b8ab1fbb681c730438eb57fefbf1b33e
+guid: 4d3823324902ed14baa0cdb94c257e71
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,34 +129,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Health Globe Edited_0
+      name: tooltip and arrow_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 218
-        width: 210
-        height: 210
+        x: 1
+        y: 15
+        width: 46
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3767567a7f6b0c34ebffbdf1ddc3e7ec
-      internalID: -157620517
+      spriteID: 29ce23f1a00b98a41a2db06d40ec48c1
+      internalID: 1426272969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Health Globe Edited_1
+      name: tooltip and arrow_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 210
-        height: 210
+        x: 4
+        y: 3
+        width: 16
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 362e3fc2c8dcdbd4c94924410c099b00
-      internalID: -1465263561
+      spriteID: 5435103cd75db7c41a24b4b95e1f53e8
+      internalID: -1327426196
       vertices: []
       indices: 
       edges: []
@@ -181,8 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Health Globe Edited_1: -1465263561
-      Health Globe Edited_0: -157620517
+      tooltip and arrow_1: -1327426196
+      tooltip and arrow_0: 1426272969
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

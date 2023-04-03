@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ab2208a8662864a81bba21513230b3, type: 3}
   m_Name: PurpleOrc
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  maxHealth: 40
-  damage: 100
-  scoreValue: 1
+  moveSpeed: 3.7
+  maxHealth: 150
+  damage: 150
+  scoreValue: 2

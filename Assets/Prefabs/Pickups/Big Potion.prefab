@@ -248,6 +248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611b2e49c9d62da479a698ea6b0640fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heathToRestore: 20
+  heathToRestore: 200
   rotationSpeed: 50
   rotationAngle: 30

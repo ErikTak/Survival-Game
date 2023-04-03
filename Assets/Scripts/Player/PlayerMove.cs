@@ -81,7 +81,7 @@ public class PlayerMove : MonoBehaviour
             lastMovedVector = new Vector2(lastHorizontalVector, lastVerticalVector); // While moving
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.Space))
         {
             Dash();
         }

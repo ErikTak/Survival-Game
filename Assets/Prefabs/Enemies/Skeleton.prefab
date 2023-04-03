@@ -317,7 +317,7 @@ Transform:
   m_GameObject: {fileID: 6949029344747060810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7595398118106676672}
@@ -448,6 +448,9 @@ MonoBehaviour:
   - name: Blue Gem
     itemPrefab: {fileID: 7831860376292965640, guid: 2f31af4c5a375d440b248b7237dbc28e, type: 3}
     dropRate: 100
+  - name: Green Gem
+    itemPrefab: {fileID: 7831860376292965640, guid: 8d55e456f1ccbcc4c97de752c46044e4, type: 3}
+    dropRate: 20
 --- !u!114 &-4603683121075503688
 MonoBehaviour:
   m_ObjectHideFlags: 0

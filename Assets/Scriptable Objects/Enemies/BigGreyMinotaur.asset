@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ab2208a8662864a81bba21513230b3, type: 3}
   m_Name: BigGreyMinotaur
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  maxHealth: 200
+  moveSpeed: 2.5
+  maxHealth: 300
   damage: 200
   scoreValue: 3
