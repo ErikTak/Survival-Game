@@ -167,7 +167,7 @@ MonoBehaviour:
     dropRate: 100
   - name: Green Gem
     itemPrefab: {fileID: 7831860376292965640, guid: 8d55e456f1ccbcc4c97de752c46044e4, type: 3}
-    dropRate: 20
+    dropRate: 70
 --- !u!114 &8006294803555600632
 MonoBehaviour:
   m_ObjectHideFlags: 0

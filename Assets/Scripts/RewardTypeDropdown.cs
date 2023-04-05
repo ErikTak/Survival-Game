@@ -16,22 +16,32 @@ public class RewardTypeDropdown : MonoBehaviour
         
         if (rewardOption == 0)
         {
-            gameTypeText.text = "Your game mode is currently set to Basic. All upgrades you get for leveling up have been preselected for you.";
+            gameTypeText.text = "<color=blue>Control.</color> \n Level up rewards have been pre-selected for you. You get the same order of rewards every attempt.";
         }
         if (rewardOption == 1)
         {
-            gameTypeText.text = "Your game mode is currently set to Random. Your upgrades will be randomly selected when leveling up.";
+            gameTypeText.text = "<color=blue>Case 1.</color> \n Your reward is randomly selected when leveling up.";
         }
         if (rewardOption == 2)
         {
-            gameTypeText.text = "Your game mode is currently set to Choose. You get to see all possible upgrade options and choose the one you like the most.";
+            gameTypeText.text = "<color=blue>Case 2.</color> \n At level up, you get to see all possible upgrade options and choose the one you like the most.";
         }
 
     }
 
     public void SetDropdownValue()
     {
-        // Save the selected value to PlayerPrefs
-        PlayerPrefs.SetInt("RewardOption", dropdown.value);
+        if (dropdown.value == 0)
+        {
+            PlayerPrefs.SetInt("RewardOption", 0);
+        }        
+        if (dropdown.value == 1)
+        {
+            PlayerPrefs.SetInt("RewardOption", 1);
+        }        
+        if (dropdown.value == 2)
+        {
+            PlayerPrefs.SetInt("RewardOption", 2);
+        }
     }
 }

@@ -21,17 +21,17 @@ public class EndGameMenu : MonoBehaviour
         if (rewardOption == 0)
         {
             highScoreDisplay.text = PlayerPrefs.GetInt("BasicHighScore", 0).ToString();
-            highScoreLabelDisplay.text = "Basic Mode High Score:"; 
+            highScoreLabelDisplay.text = "<color=blue>Control</color>\n High Score:"; 
         }
         if (rewardOption == 1)
         {
             highScoreDisplay.text = PlayerPrefs.GetInt("RandomHighScore", 0).ToString();
-            highScoreLabelDisplay.text = "Random Mode High Score:";
+            highScoreLabelDisplay.text = "<color=blue>Case 1</color>\n High Score:";
         }
         if (rewardOption == 2)
         {
             highScoreDisplay.text = PlayerPrefs.GetInt("ChooseHighScore", 0).ToString();
-            highScoreLabelDisplay.text = "Choose Mode High Score:";
+            highScoreLabelDisplay.text = "<color=blue>Case 2</color>\n High Score:";
         }
     }
 

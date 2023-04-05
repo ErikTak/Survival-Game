@@ -15704,20 +15704,20 @@ MonoBehaviour:
     endLevel: 1
     experienceCapIncrease: 80
   - startLevel: 2
-    endLevel: 4
-    experienceCapIncrease: 40
-  - startLevel: 5
     endLevel: 8
-    experienceCapIncrease: 43
+    experienceCapIncrease: 40
   - startLevel: 9
     endLevel: 15
-    experienceCapIncrease: 46
+    experienceCapIncrease: 37
   - startLevel: 16
     endLevel: 30
-    experienceCapIncrease: 50
+    experienceCapIncrease: 34
   - startLevel: 31
+    endLevel: 50
+    experienceCapIncrease: 31
+  - startLevel: 51
     endLevel: 88
-    experienceCapIncrease: 55
+    experienceCapIncrease: 30
 --- !u!114 &1486781161
 MonoBehaviour:
   m_ObjectHideFlags: 0
