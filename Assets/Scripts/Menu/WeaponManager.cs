@@ -60,7 +60,7 @@ public class WeaponManager : MonoBehaviour
         HideFixedButtons();
 
         // Activate the specified weapon controller
-        weaponControllers[weaponControllerIndex].SetActive(true);
+        //weaponControllers[weaponControllerIndex].SetActive(true);
 
 
         // Set the card display for the single upgrade button
@@ -71,6 +71,7 @@ public class WeaponManager : MonoBehaviour
 
             if (!weaponControllers[weaponControllerIndex].activeSelf)
             {
+                Debug.Log("Weapon is not active yet. Displaying the +0 version");
                 weapon = weaponControllers[weaponControllerIndex].GetComponent<WeaponController>().weapons[weaponControllers[weaponControllerIndex].GetComponent<WeaponController>().currentWeaponIndex];
             }
             else
